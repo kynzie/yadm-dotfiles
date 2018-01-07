@@ -14,3 +14,12 @@ alias grep='grep --color'
 alias egrep='egrep --color'
 alias ssh='TERM=xterm-256color ssh'
 alias klog='dmesg --color=always | less -R'
+
+{% if YADM_USER == 'kynzie' -%}
+alias gitk='gitk --all &'
+alias v='gvim'
+alias mutt='neomutt'
+alias gpg='gpg2'
+{% else -%}
+alias v="$EDITOR"
+{% endif -%}
