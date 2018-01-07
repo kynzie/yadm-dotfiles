@@ -1,0 +1,3 @@
+for sh in $(find $HOME/.shell/ -name \*.sh); do
+	. $sh
+done
