@@ -3,3 +3,11 @@ export HISTSIZE=$((2 ** 15 - 1))
 export HISTCONTROL=ignoredups,erasedups
 export MAILCHECK=-1
 export EDITOR="vim"
+
+{% if YADM_USER == 'kynzie' -%}
+export NNTPSERVER=news.epita.fr
+
+if [ -e $HOME/android ] && [ -e $HOME/android/bin ]; then
+        export PATH=$PATH:/home/kynzie/android/bin
+fi
+{% endif -%}
