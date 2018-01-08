@@ -4,6 +4,13 @@ export HISTCONTROL=ignoredups,erasedups
 export MAILCHECK=-1
 export EDITOR="vim"
 
+if [[ $SHELL == */zsh ]]; then
+        export HISTFILE=$HOME/.history
+else
+        export HISTFILE=$HOME/.sh_history
+        export HISTTIMEFORMAT="%d/%m/%y %T "
+fi
+
 {% if YADM_USER == 'kynzie' -%}
 export NNTPSERVER=news.epita.fr
 
