@@ -1,0 +1,11 @@
+term_size() {
+	size=$1
+	/usr/bin/env echo -ne "\33]50;Monospace:pixelsize=$size\7"
+}
+
+all_term_size() {
+	size=$1
+	for i in /dev/pts/* ; do
+		term_size $size 2> /dev/null > $i
+	done
+}
