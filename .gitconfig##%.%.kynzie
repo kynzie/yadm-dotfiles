@@ -1,0 +1,101 @@
+[user]
+	name = Alizée Penel
+	email = alizee@lse.epita.fr
+	signingkey = D9D1EF112A725BA3908E3AF35B1F2940A6A760F6
+
+[push]
+	default = simple
+
+[pull]
+	rebase = true
+
+[commit]
+	verbose = true
+	gpgsign = true
+
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	grep = auto
+	interactive = auto
+	pager = true
+	showBranch = auto
+	status = auto
+
+[color "branch"]
+	current = green bold
+	local = dim
+	remote = green dim
+	upstream = cyan
+	plain = yellow
+
+[color "diff"]
+	plain = dim
+	meta = "#ff8000"
+	frag = "#3399ff"
+	func = "#00ffff"
+	old = red bold
+	new = green bold
+	commit = yellow
+	whitespace = red white bold reverse
+
+[color "decorate"]
+	branch = green bold
+	remoteBranch = green dim
+	tag = "#ff8000" bold reverse
+	stash = red
+	HEAD = cyan
+
+[color "grep"]
+	context = dim
+	filename = magenta
+	function = "#00ffff"
+	linenumber = green
+	matchSelected = red bold
+	selected = white bold
+
+[color "interactive"]
+	prompt = cyan
+	header = dim
+	help = yellow
+	error = red bold
+
+[color "status"]
+	header = dim
+	added = green bold
+	updated = green bold
+	changed = red bold
+	untracked = yellow bold
+	branch = "#ff8000" bold reverse
+	nobranch = red bold blink
+	unmerged = yellow bold blink
+
+[alias]
+	ck = checkout
+	br = branch
+	co = commit
+	st = status
+	rb = rebase
+	rst = reset
+	a = add
+	l = log --decorate
+	g = grep
+	df = diff
+	visual = !gitk --all
+	last = log -1 HEAD
+	rbi = rebase -i
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	wip = !git add -u && git commit -m "WIP"
+	test = !git push -n
+	amend = commit -a --amend
+
+#[sendemail]
+#	smtpuser = alizee.penel@gmail.com
+#	smtpserver = smtp.googlemail.com
+#	smtpencryption = tls
+#	smtpserverport = 587
+#	smtppass = rtyjhxwguvpvhiis
+#	suppresscc = self
+
+
