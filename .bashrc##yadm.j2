@@ -6,3 +6,25 @@ shopt -s histappend
 shopt -s checkwinsize
 
 . $HOME/.shellrc
+
+{% if YADM_USER == 'kynzie' -%}
+# Add completion even with sudo
+complete -cf sudo
+
+BASH_CMPL_DIR=/usr/share/bash-completion/completions
+BASH_CMD_CACH=$HOME/.cache/bash-cmd-completions
+
+if [ -d $BASH_CMPL_DIR ]; then
+        if [ ! -f $BASH_CMD_CACH ]; then
+                for cmd in $(ls $BASH_CMPL_DIR); do
+                        which $cmd &> /dev/null && echo $cmd >> $BASH_CMD_CACH
+                done
+        fi
+
+        for cmd in $(cat $BASH_CMD_CACH); do
+                . $BASH_CMPL_DIR/$cmd
+        done
+fi
+unset BASH_CMPL_DIR
+unset BASH_CMD_CACH
+{% endif -%}
