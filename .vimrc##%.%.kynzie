@@ -1,0 +1,61 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'airblade/vim-gitgutter'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/cscope.vim'
+Plugin 'flazz/vim-colorschemes'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+set mouse=
+set encoding=utf-8 fileencodings=
+set backspace=2
+
+syntax on
+
+" Vim appearance
+if has("gui_running")
+  set guifont=DejaVu\ Sans\ Mono\ 8
+  set guioptions-=T
+  set guioptions-=r
+  set guioptions-=m
+  set mouse=a
+endif
+
+set background=dark
+colorscheme koehler
+
+set textwidth=80
+
+set colorcolumn=+1
+hi ColorColumn guibg=#2d2d2d
+
+set number
+hi LineNr guifg=#8d8d8d
+
+" Indent
+set smartindent
+autocmd FileType python setlocal expandtab
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal softtabstop=4
+autocmd Filetype make setlocal noexpandtab
+
+" Search
+set incsearch          " do incremental searching
+hi IncSearch guifg=#0099ff
+
+set hlsearch           " highlight search
+hi Search guibg=#0099ff
+
+" Spell Chacking
+set spell spelllang=en_us,fr
