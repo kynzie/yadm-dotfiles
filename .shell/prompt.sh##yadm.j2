@@ -1,0 +1,62 @@
+{% if YADM_USER == 'kynzie' -%}
+parse_git_branch() {
+    git_status="$(git status 2> /dev/null)"
+    branch_pattern="^On branch ([^${PMT_SEP}]*)"
+    remote_pattern="# Your branch is (.*) by"
+    diverge_pattern="# Your branch and (.*) have diverged"
+
+    if [[ ! ${git_status} =~ "working tree clean" ]]; then
+       state="${BOLD_RED}⚡"
+    fi
+
+    # add an else if or two here if you want to get more specific
+    if [[ ${git_status} =~ ${remote_pattern} ]]; then
+       if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
+           remote="${YELLOW}↑"
+       else
+           remote="${YELLOW}↓"
+       fi
+    fi
+    if [[ ${git_status} =~ ${diverge_pattern} ]]; then
+       remote="${YELLOW}↕"
+    fi
+
+    if [[ ${git_status} =~ ${branch_pattern} ]]; then
+        if [ $0 = 'bash' ]; then
+            branch=${BASH_REMATCH[1]}
+        else
+            branch=$match[1]
+        fi
+       echo " (${branch})${remote}${state}${COLOR_NONE}"
+    else
+       branch=$(git log --oneline HEAD^..HEAD 2>/dev/null | cut -f1 -d' ')
+       echo " (${branch})${remote}${state}${COLOR_NONE}"
+    fi
+}
+
+parse_scm() {
+    git rev-parse --git-dir &> /dev/null && parse_git_branch
+}
+{% endif -%}
+
+prompt_setup() {
+    RET=$?
+    prompt1="${BLUE}[${CYAN}${PMT_DATE} ${PMT_TIME}${BLUE}]"
+
+    if [ $USER = "root" ]; then
+        prompt2="${BLUE}[${PURPLE}${PMT_WORK_DIR}${BLUE}]${COLOR_NONE}"
+    else
+        prompt2="${BLUE}[${PURPLE}${PMT_WORK_DIR}${GREEN}$(parse_scm)${BLUE}]${COLOR_NONE}"
+    fi
+    prompt3="${BOLD_BLUE}${PMT_USER}@${PMT_HOST}${COLOR_NONE}${YELLOW} (${PMT_JOBS})"
+
+    if [ -n "$SSH_CLIENT" ]; then
+       on_ssh_session="${BOLD_YELLOW} *SSH*${COLOR_NONE}"
+    fi
+
+    if [ $RET -eq 0 ]; then
+        echo -n "${prompt1}${prompt2}\n${prompt3}${on_ssh_session} ${YELLOW}\$${COLOR_NONE} "
+    else
+        echo -n "${prompt1}${prompt2}\n${prompt3}${on_ssh_session} ${RED}\$${COLOR_NONE} "
+    fi
+}
