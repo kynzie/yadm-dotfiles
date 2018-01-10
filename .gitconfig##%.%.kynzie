@@ -89,13 +89,3 @@
 	wip = !git add -u && git commit -m "WIP"
 	test = !git push -n
 	amend = commit -a --amend
-
-#[sendemail]
-#	smtpuser = alizee.penel@gmail.com
-#	smtpserver = smtp.googlemail.com
-#	smtpencryption = tls
-#	smtpserverport = 587
-#	smtppass =
-#	suppresscc = self
-
-
