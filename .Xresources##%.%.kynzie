@@ -2,3 +2,4 @@ XTerm*locale: true
 XTerm*saveLines: 1000000
 XTerm*reverseVideo: on
 XTerm*faceName: DejaVu Mono:size=9
+XTerm*termName: xterm-256color
