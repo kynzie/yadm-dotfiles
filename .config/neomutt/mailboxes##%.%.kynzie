@@ -1,5 +1,5 @@
 # Virtual mailbox for Inbox
-virtual-mailboxes "Inbox" "notmuch://?query=tag:Inbox and date:yesterday..!"
+virtual-mailboxes "Inbox" "notmuch://?query=tag:Inbox"
 
 # Virtual mailbox for Sent
 virtual-mailboxes "Sent" "notmuch://?query=tag:Sent"
