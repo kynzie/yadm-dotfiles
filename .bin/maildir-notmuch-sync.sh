@@ -63,9 +63,9 @@
 # Maildir Information
 # ----------------------------------
 
-INBOX="inbox"       # (mutt's spool dir)  - both the tag and folder
-SENT="sent"         # (mutt's record dir) - both the tag and folder
-TRASH="trash"       # trash maildir, gmail requires for real deletion
+INBOX="Inbox"       # (mutt's spool dir)  - both the tag and folder
+SENT="Sent"         # (mutt's record dir) - both the tag and folder
+TRASH="Trash"       # trash maildir, gmail requires for real deletion
 
 # Note that the tag/folder values (INBOX/SENT/etc) must match
 # your local maildir names, after any nametrans by offlineimap. For
@@ -711,6 +711,8 @@ if [ "$SUBCMD" == "pre" ]; then
     IFS=$'\n'
     for MAILBOX_FULL_PATH in $MAILBOXES_FULL_PATHS; do
         Notmuch_State_To_Maildir__Move_To_Maildir $MAILBOX_FULL_PATH
+    done
+    for MAILBOX_FULL_PATH in $MAILBOXES_FULL_PATHS; do
         Notmuch_State_To_Maildir__Remove_From_Maildir $MAILBOX_FULL_PATH
     done
     IFS=$OLD_IFS
