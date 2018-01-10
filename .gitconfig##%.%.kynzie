@@ -13,6 +13,9 @@
 	verbose = true
 	gpgsign = true
 
+[format]
+	signOff = true
+
 [color]
 	ui = auto
 	branch = auto
@@ -74,7 +77,7 @@
 [alias]
 	ck = checkout
 	br = branch
-	co = commit
+	co = commit -s
 	st = status
 	rb = rebase
 	rst = reset
