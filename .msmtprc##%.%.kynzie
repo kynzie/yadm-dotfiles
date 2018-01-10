@@ -11,7 +11,7 @@ account        gmail
 host           smtp.gmail.com
 from           alizee.penel@gmail.com
 user           alizee.penel@gmail.com
-passwordeval   "pass show eMails/mutt-gmail"
+passwordeval   "pass show eMails/neomutt-gmail"
 
 # LSE
 account        lse-alizee

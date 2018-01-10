@@ -1,7 +1,7 @@
 IMAPAccount gmail
 Host imap.gmail.com
 User alizee.penel@gmail.com
-Pass vndgiztmizrduqxl
+PassCmd "pass show eMails/neomutt-gmail"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
