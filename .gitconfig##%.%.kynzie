@@ -95,7 +95,7 @@
 #	smtpserver = smtp.googlemail.com
 #	smtpencryption = tls
 #	smtpserverport = 587
-#	smtppass = rtyjhxwguvpvhiis
+#	smtppass =
 #	suppresscc = self
 
 
