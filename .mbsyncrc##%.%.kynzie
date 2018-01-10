@@ -1,0 +1,43 @@
+IMAPAccount gmail
+Host imap.gmail.com
+User alizee.penel@gmail.com
+Pass vndgiztmizrduqxl
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/.mail/gmail/
+Inbox ~/.mail/gmail/Inbox
+SubFolders Verbatim
+
+Channel gmail-all
+Master :gmail-remote:
+Slave :gmail-local:
+Patterns * ![Gmail]* !KERNEL* !Chats !Drafts !Sent !Spam !Trash
+
+Channel gmail-chats
+Master :gmail-remote:"[Gmail]/Chats"
+Slave :gmail-local:Chats
+
+Channel gmail-drafts
+Master :gmail-remote:"[Gmail]/Drafts"
+Slave :gmail-local:Drafts
+
+Channel gmail-sent
+Master :gmail-remote:"[Gmail]/Sent Mail"
+Slave :gmail-local:Sent
+
+Channel gmail-spam
+Master :gmail-remote:"[Gmail]/Spam"
+Slave :gmail-local:Spam
+
+Channel gmail-trash
+Master :gmail-remote:"[Gmail]/Trash"
+Slave :gmail-local:Trash
+
+
+Create Both
+SyncState *

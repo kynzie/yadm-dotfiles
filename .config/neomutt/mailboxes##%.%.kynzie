@@ -1,0 +1,159 @@
+# Virtual mailbox for Inbox
+virtual-mailboxes "Inbox" "notmuch://?query=tag:Inbox and date:yesterday..!"
+
+# Virtual mailbox for Sent
+virtual-mailboxes "Sent" "notmuch://?query=tag:Sent"
+
+# Virtual mailbox for Drafts
+virtual-mailboxes "Drafts" "notmuch://?query=tag:Drafts"
+
+# Virtual mailbox for Trash
+virtual-mailboxes "Trash" "notmuch://?query=tag:Trash"
+
+# Virtual mailbox for LSE
+virtual-mailboxes "LSE" "notmuch://?query=tag:EPITA/LSE"
+
+# Virtual mailbox for LSE/Mailing Lists
+virtual-mailboxes "  Mailing lists" "notmuch://?query=query:lse-mls"
+
+# Virtual mailbox for EPITA/2018
+virtual-mailboxes "2018" "notmuch://?query=tag:EPITA/2018"
+
+# Virtual mailbox for EPITA/2018/ML
+virtual-mailboxes "  ML" "notmuch://?query=tag:EPITA/2018/ML"
+
+# Virtual mailbox for EPITA/2018/PFE
+virtual-mailboxes "  PFE" "notmuch://?query=tag:EPITA/2018/PFE"
+
+# Virtual mailbox for EPITA/2018/SAND
+virtual-mailboxes "  SAND" "notmuch://?query=tag:EPITA/2018/SAND"
+
+# Virtual mailbox for EPITA/2022
+virtual-mailboxes "2022" "notmuch://?query=tag:EPITA/2022"
+
+# Virtual mailbox for EPITA/2022/Students
+virtual-mailboxes "  Students" "notmuch://?query=tag:EPITA/2022/Students"
+
+# Virtual mailbox for EPITA/2022/A2
+virtual-mailboxes "    A2" "notmuch://?query=tag:EPITA/2022/Students/A2"
+
+# Virtual mailbox for EPITA/2022/C1
+virtual-mailboxes "    C1" "notmuch://?query=tag:EPITA/2022/Students/C1"
+
+# Virtual mailbox for EPITA/2022/C2
+virtual-mailboxes "    C2" "notmuch://?query=tag:EPITA/2022/Students/C2"
+
+# Virtual mailbox for EPITA/Apprenticeship
+virtual-mailboxes "Apprenticeship" "notmuch://?query=tag:EPITA/Apprenticeship"
+
+# Virtual mailbox for EPITA/Apprenticeship/Tutelage
+virtual-mailboxes "  Tutelage" "notmuch://?query=tag:EPITA/Apprenticeship/Tutelage"
+
+# Virtual mailbox for Com' and ADM
+virtual-mailboxes "ADM" "notmuch://?query=tag:EPITA/Com' or tag:EPITA/ADM"
+
+# Virtual mailbox for EPITA/ACU-YAKA
+virtual-mailboxes "ACU-YAKA" "notmuch://?query=query:acu-yaka"
+
+# Virtual mailbox for EPITA/Lectures Preparation
+virtual-mailboxes "Lectures Preparation" "notmuch://?query=query:lec-prep"
+
+# Virtual mailbox for Family
+virtual-mailboxes "Family" "notmuch://?query=query:family"
+
+# Virtual mailbox for Friends
+virtual-mailboxes "Friends" "notmuch://?query=query:friends"
+
+# Virtual mailbox for Publications
+virtual-mailboxes "Publications" "notmuch://?query=tag:Publications"
+
+# Virtual mailbox for LKML
+virtual-mailboxes "Kernel" "notmuch://?query=query:lkml"
+
+# Virtual mailbox for Perso
+virtual-mailboxes "Perso" "notmuch://?query=tag:\"Personal management\""
+
+# Virtual mailbox for Perso/Bank
+virtual-mailboxes "  Bank" "notmuch://?query=query:bank"
+
+# Virtual mailbox for Perso/Flat
+virtual-mailboxes "  Flat" "notmuch://?query=query:flat"
+
+# Virtual mailbox for Perso/Internet-Phone
+virtual-mailboxes "  Net-Phone" "notmuch://?query=query:internet-phone"
+
+# Virtual mailbox for Personal management/Taxes
+virtual-mailboxes "  Taxes" "notmuch://?query=tag:\"Personal management/Taxes\""
+
+# Virtual mailbox for Perso/Health
+virtual-mailboxes "  Health" "notmuch://?query=tag:\"Personal management/Health\""
+
+# Virtual mailbox for Perso/Shopping
+virtual-mailboxes "  Shopping" "notmuch://?query=query:shopping"
+
+# Virtual mailbox for Perso/Homelab
+virtual-mailboxes "  Homelab" "notmuch://?query=query:homelab"
+
+# Virtual mailbox for Perso/Others
+virtual-mailboxes "  Others" "notmuch://?query=query:perso-others"
+
+# Virtual mailbox for Studies/EPITA
+virtual-mailboxes "EPITA (Studies)" "notmuch://?query=tag:Studies/EPITA"
+
+# Virtual mailbox for Studies/EPITA/ADM
+virtual-mailboxes "  ADM" "notmuch://?query=query:studies-epita-adm"
+
+# Virtual mailbox for Studies/EPITA/Assos
+virtual-mailboxes "  Assos" "notmuch://?query=query:studies-epita-assos"
+
+# Virtual mailbox for Studies/EPITA/Internships
+virtual-mailboxes "  Internships" "notmuch://?query=tag:Studies/EPITA/Business/Internships"
+
+# Virtual mailbox for Studies/EPITA/GISTRE
+virtual-mailboxes "  GISTRE" "notmuch://?query=query:studies-epita-gistre"
+
+# Virtual mailbox for Studies/EPITA/ING1
+virtual-mailboxes "  ING1" "notmuch://?query=query:studies-epita-ing1"
+
+# Virtual mailbox for Studies/EPITA/Projects
+virtual-mailboxes "    Projects" "notmuch://?query=query:project"
+
+# Virtual mailbox for Studies/EPITA/SUP-SPE
+virtual-mailboxes "  SUP-SPE" "notmuch://?query=tag:Studies/EPITA/SUP-SPE"
+
+# Virtual mailbox for Prospect jobs
+virtual-mailboxes "Prospect jobs" "notmuch://?query=tag:Work/Prospect"
+
+# Virtual mailbox for Pole Emploi
+virtual-mailboxes "Pole Emploi" "notmuch://?query=tag:\"Work/Pole Emploi\""
+
+# Virtual mailbox for Perso/Old
+virtual-mailboxes "Perso (Old)" "notmuch://?query=query:perso-old"
+
+# Virtual mailbox for Work
+virtual-mailboxes "Work  (Old)" "notmuch://?query=query:work"
+
+# Virtual mailbox for EPITA/Old
+virtual-mailboxes "EPITA (Old)" "notmuch://?query=query:epita-old"
+
+# Virtual mailbox for Chats
+virtual-mailboxes "Chats" "notmuch://?query=tag:Chats"
+
+# Virtual mailbox for Web accounts
+virtual-mailboxes "Web accounts" "notmuch://?query=query:web-accounts"
+
+# Virtual mailbox for Spam
+virtual-mailboxes "Spam" "notmuch://?query=tag:Spam"
+
+# Virtual mailbox for Perso
+#virtual-mailboxes "Perso" "notmuch://?query=tag:\"Personal management\""
+
+# Virtual mailbox for Studies
+#virtual-mailboxes "Studies" "notmuch://?query=tag:Studies"
+
+# Virtual mailbox for Studies/EPITA
+#virtual-mailboxes "Studies/EPITA" "notmuch://?query=tag:Studies/EPITA"
+
+# Virtual mailbox for EPITA
+#virtual-mailboxes "EPITA" "notmuch://?query=tag:EPITA"
+

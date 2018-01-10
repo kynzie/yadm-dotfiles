@@ -1,0 +1,24 @@
+# Set default values for all following accounts.
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+port           587
+
+# Gmail
+account        gmail
+host           smtp.gmail.com
+from           alizee.penel@gmail.com
+user           alizee.penel@gmail.com
+passwordeval   "pass show eMails/mutt-gmail"
+
+# LSE
+account        lse-alizee
+from           alizee@lse.epita.fr
+host           smtp.lse.epita.fr
+user           alizee.penel
+passwordeval   "pass show Work/EPITA/CRI/cri.epita.net"
+auth           plain
+
+account default : lse-alizee
