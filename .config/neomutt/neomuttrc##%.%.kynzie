@@ -1,7 +1,7 @@
 set nm_default_uri="notmuch://$HOME/.mail"
 set mbox_type=maildir
-set sort_aux='last-date-sent'
-set sort='reverse-threads'
+set sort='threads'
+set sort_aux='reverse-date-sent'
 set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
 set folder="/home/kynzie/.mail/gmail"
 

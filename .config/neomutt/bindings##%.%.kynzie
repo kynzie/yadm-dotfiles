@@ -22,6 +22,9 @@ macro index R \
 macro index \\\\ "<vfolder-from-query>" "Search mailbox"
 macro index,pager + "<modify-labels>+" "+Add or -Remove notmuch tags"
 macro index,pager - "<modify-labels-then-hide>-" "+Add or -Remove notmuch tags then hide the message"
+macro index \eD \
+        "<modify-labels-then-hide>-Inbox -unread +Trash<enter>" \
+        "tag as deleted"
 bind index,pager a group-reply
 bind pager j next-line
 bind pager k previous-line
