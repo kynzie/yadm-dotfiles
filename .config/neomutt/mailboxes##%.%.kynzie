@@ -50,7 +50,7 @@ virtual-mailboxes "Apprenticeship" "notmuch://?query=tag:EPITA/Apprenticeship"
 virtual-mailboxes "  Tutelage" "notmuch://?query=tag:EPITA/Apprenticeship/Tutelage"
 
 # Virtual mailbox for Com' and ADM
-virtual-mailboxes "ADM" "notmuch://?query=tag:EPITA/Com' or tag:EPITA/ADM"
+virtual-mailboxes "ADM" "notmuch://?query=tag:EPITA/Com or tag:EPITA/ADM"
 
 # Virtual mailbox for EPITA/ACU-YAKA
 virtual-mailboxes "ACU-YAKA" "notmuch://?query=query:acu-yaka"
@@ -71,7 +71,7 @@ virtual-mailboxes "Publications" "notmuch://?query=tag:Publications"
 virtual-mailboxes "Kernel" "notmuch://?query=query:lkml"
 
 # Virtual mailbox for Perso
-virtual-mailboxes "Perso" "notmuch://?query=tag:\"Personal management\""
+virtual-mailboxes "Perso" "notmuch://?query=tag:PersonalManagement"
 
 # Virtual mailbox for Perso/Bank
 virtual-mailboxes "  Bank" "notmuch://?query=query:bank"
@@ -82,11 +82,11 @@ virtual-mailboxes "  Flat" "notmuch://?query=query:flat"
 # Virtual mailbox for Perso/Internet-Phone
 virtual-mailboxes "  Net-Phone" "notmuch://?query=query:internet-phone"
 
-# Virtual mailbox for Personal management/Taxes
-virtual-mailboxes "  Taxes" "notmuch://?query=tag:\"Personal management/Taxes\""
+# Virtual mailbox for PersonalManagement/Taxes
+virtual-mailboxes "  Taxes" "notmuch://?query=tag:PersonalManagement/Taxes"
 
 # Virtual mailbox for Perso/Health
-virtual-mailboxes "  Health" "notmuch://?query=tag:\"Personal management/Health\""
+virtual-mailboxes "  Health" "notmuch://?query=tag:PersonalManagement/Health"
 
 # Virtual mailbox for Perso/Shopping
 virtual-mailboxes "  Shopping" "notmuch://?query=query:shopping"
@@ -125,7 +125,7 @@ virtual-mailboxes "  SUP-SPE" "notmuch://?query=tag:Studies/EPITA/SUP-SPE"
 virtual-mailboxes "Prospect jobs" "notmuch://?query=tag:Work/Prospect"
 
 # Virtual mailbox for Pole Emploi
-virtual-mailboxes "Pole Emploi" "notmuch://?query=tag:\"Work/Pole Emploi\""
+virtual-mailboxes "Pole Emploi" "notmuch://?query=tag:Work/PoleEmploi"
 
 # Virtual mailbox for Perso/Old
 virtual-mailboxes "Perso (Old)" "notmuch://?query=query:perso-old"
@@ -146,7 +146,7 @@ virtual-mailboxes "Web accounts" "notmuch://?query=query:web-accounts"
 virtual-mailboxes "Spam" "notmuch://?query=tag:Spam"
 
 # Virtual mailbox for Perso
-#virtual-mailboxes "Perso" "notmuch://?query=tag:\"Personal management\""
+#virtual-mailboxes "Perso" "notmuch://?query=tag:PersonalManagement"
 
 # Virtual mailbox for Studies
 #virtual-mailboxes "Studies" "notmuch://?query=tag:Studies"
