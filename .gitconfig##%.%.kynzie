@@ -82,6 +82,7 @@
 	rb = rebase
 	rst = reset
 	a = add
+	ap = add -p
 	l = log --decorate
 	g = grep
 	df = diff
