@@ -16,7 +16,8 @@ fi
 
 {% if YADM_USER == 'kynzie' -%}
 export NNTPSERVER=news.epita.fr
-export PATH=$PATH:$HOME/.bin
+export GOPATH=$HOME/.go
+export PATH=$PATH:$HOME/.bin:$GOPATH/bin
 
 if [ -e $HOME/android ] && [ -e $HOME/android/bin ]; then
         export PATH=$PATH:/home/kynzie/android/bin
