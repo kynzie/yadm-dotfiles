@@ -1,4 +1,4 @@
-set nm_default_uri="notmuch://$HOME/.mail"
+set nm_default_uri="notmuch://$HOME/.mail/gmail"
 set mbox_type=maildir
 set sort='threads'
 set sort_aux='reverse-date-sent'

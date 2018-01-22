@@ -16,7 +16,11 @@ SubFolders Verbatim
 Channel gmail-all
 Master :gmail-remote:
 Slave :gmail-local:
-Patterns * ![Gmail]* !KERNEL* !Chats !Drafts !Sent !Spam !Trash
+Patterns * ![Gmail]* !KERNEL* !Chats !Drafts !Sent !Spam !Trash !Inbox
+
+Channel gmail-inbox
+Master :gmail-remote:Inbox
+Slave :gmail-local:Inbox
 
 Channel gmail-chats
 Master :gmail-remote:"[Gmail]/Chats"
