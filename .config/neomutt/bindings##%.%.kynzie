@@ -17,7 +17,7 @@ macro index A \
 macro index S \
         "<modify-labels-then-hide>+Spam -Inbox -unread<enter>" 
 macro index R \
-        "<pipe-message>~/.bin/maildir-notmuch-sync.sh pre ~/.mail/gmail && mbsync -a; notmuch new && ~/.bin/maildir-notmuch-sync.sh post ~/.mail/gmail<enter>" \
+        "<pipe-message>mblabelsync -d=/home/kynzie/.mail/gmail all<enter>" \
         "sync all mailboxes"
 macro index \\\\ "<vfolder-from-query>" "Search mailbox"
 macro index,pager + "<modify-labels>+" "+Add or -Remove notmuch tags"
