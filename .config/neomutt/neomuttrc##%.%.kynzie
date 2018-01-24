@@ -1,10 +1,10 @@
-set nm_default_uri="notmuch://$HOME/.mail/gmail"
 set mbox_type=maildir
 set sort='threads'
 set sort_aux='reverse-date-sent'
 set editor='vim + -c "set textwidth=72" -c "set wrap" -c "set nocp" -c "?^$"'
-set folder="/home/kynzie/.mail/gmail"
+set folder="~/.mail/gmail"
 
+set nm_default_uri="notmuch://$HOME/.mail/gmail"
 set realname = "Alizée Penel"
 set signature = $HOME/.signature
 set from = "Alizée Penel <alizee@lse.epita.fr>"

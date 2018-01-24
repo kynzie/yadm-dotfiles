@@ -12,8 +12,8 @@ ${CMD}lec-prep	"tag:EPITA/LecturesPreparation or \
 
 ${CMD}family	"tag:tag:Family/Loche or tag:Family/Mignot or tag:Family/Penel"
 
-${CMD}friends	"tag:Friends or tag:Friends/Dogs or Friends/EPITA or 	\
-		Friends/JDR-GN or tag:Friends/PrepaClass or	\
+${CMD}friends	"tag:Friends or tag:Friends/Dogs or tag:Friends/EPITA or 	\
+		tag:Friends/JDR-GN or tag:Friends/PrepaClass or	\
 		tag:Friends/sjbranleurs"
 
 ${CMD}lkml	"tag:KERNEL or tag:KERNEL/KernelNewbies		\

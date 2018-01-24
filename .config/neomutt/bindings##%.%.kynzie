@@ -12,8 +12,7 @@ macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 macro attach , "<save-entry><bol>$HOME/<eol>" "Save to $HOME folder"
 
 macro index A \
-        "<modify-labels-then-hide>-Inbox -unread<enter>" \
-        "tag as archived"
+        "<modify-labels-then-hide>-Inbox -unread "
 macro index S \
         "<modify-labels-then-hide>+Spam -Inbox -unread<enter>" 
 macro index R \
