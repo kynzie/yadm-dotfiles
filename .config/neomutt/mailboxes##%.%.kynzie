@@ -49,8 +49,11 @@ virtual-mailboxes "Apprenticeship" "notmuch://?query=tag:EPITA/Apprenticeship"
 # Virtual mailbox for EPITA/Apprenticeship/Tutelage
 virtual-mailboxes "  Tutelage" "notmuch://?query=tag:EPITA/Apprenticeship/Tutelage"
 
+# Virtual mailbox for EPITA events
+virtual-mailboxes "Events" "notmuch://?query=tag:EPITA/Events"
+
 # Virtual mailbox for Com' and ADM
-virtual-mailboxes "ADM" "notmuch://?query=tag:EPITA/Com or tag:EPITA/ADM"
+virtual-mailboxes "ADM" "notmuch://?query=query:epita-adm"
 
 # Virtual mailbox for EPITA/ACU-YAKA
 virtual-mailboxes "ACU-YAKA" "notmuch://?query=query:acu-yaka"
