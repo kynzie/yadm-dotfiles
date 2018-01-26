@@ -12,9 +12,9 @@ macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 macro attach , "<save-entry><bol>$HOME/<eol>" "Save to $HOME folder"
 
 macro index A \
-        "<modify-labels-then-hide>-Inbox -unread "
+        "<modify-labels-then-hide>-unread -Inbox +"
 macro index S \
-        "<modify-labels-then-hide>+Spam -Inbox -unread<enter>" 
+        "<modify-labels-then-hide>-unread -Inbox +Spam<enter>"
 macro index R \
         "<pipe-message>mblabelsync -d=/home/kynzie/.mail/gmail all<enter>" \
         "sync all mailboxes"
@@ -22,7 +22,7 @@ macro index \\\\ "<vfolder-from-query>" "Search mailbox"
 macro index,pager + "<modify-labels>+" "+Add or -Remove notmuch tags"
 macro index,pager - "<modify-labels-then-hide>-" "+Add or -Remove notmuch tags then hide the message"
 macro index \eD \
-        "<modify-labels-then-hide>-Inbox -unread +Trash<enter>" \
+        "<modify-labels-then-hide>-unread -Inbox +Trash<enter>" \
         "tag as deleted"
 bind index,pager a group-reply
 bind pager j next-line
