@@ -10,6 +10,9 @@ virtual-mailboxes "Drafts" "notmuch://?query=tag:Drafts"
 # Virtual mailbox for Trash
 virtual-mailboxes "Trash" "notmuch://?query=tag:Trash"
 
+# Virtual mailbox for TODO
+virtual-mailboxes "TODO" "notmuch://?query=tag:ToDoQuickly"
+
 # Virtual mailbox for LSE
 virtual-mailboxes "LSE" "notmuch://?query=tag:EPITA/LSE"
 
@@ -27,6 +30,12 @@ virtual-mailboxes "  PFE" "notmuch://?query=tag:EPITA/2018/PFE"
 
 # Virtual mailbox for EPITA/2018/SAND
 virtual-mailboxes "  SAND" "notmuch://?query=tag:EPITA/2018/SAND"
+
+# Virtual mailbox for EPITA/2020
+virtual-mailboxes "2019" "notmuch://?query=tag:EPITA/2019"
+
+# Virtual mailbox for EPITA/2020/ProjetsLibres
+virtual-mailboxes "  Projets Libres" "notmuch://?query=tag:EPITA/2019/ProjetsLibres"
 
 # Virtual mailbox for EPITA/2022
 virtual-mailboxes "2022" "notmuch://?query=tag:EPITA/2022"
@@ -51,6 +60,9 @@ virtual-mailboxes "  Tutelage" "notmuch://?query=tag:EPITA/Apprenticeship/Tutela
 
 # Virtual mailbox for EPITA events
 virtual-mailboxes "Events" "notmuch://?query=tag:EPITA/Events"
+
+# Virtual mailbox for EPITA Leaks
+virtual-mailboxes "EpiLeaks" "notmuch://?query=tag:EPITA/EpiLeaks"
 
 # Virtual mailbox for Com' and ADM
 virtual-mailboxes "ADM" "notmuch://?query=query:epita-adm"
