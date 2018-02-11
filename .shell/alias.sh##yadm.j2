@@ -18,11 +18,7 @@ alias klog='dmesg --color=always | less -R'
 {% if YADM_USER == 'kynzie' -%}
 alias gitk='gitk --all &'
 alias v='gvim'
-{% if HOME[-1] != '/' -%}
-alias mutt='HOME=$HOME/ neomutt'
-{% else -%}
 alias mutt='neomutt'
-{% endif -%}
 alias gpg='gpg2'
 {% else -%}
 alias v="$EDITOR"
