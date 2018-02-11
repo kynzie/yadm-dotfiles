@@ -9,6 +9,7 @@ set realname = "Alizée Penel"
 set signature = $HOME/.signature
 set from = "Alizée Penel <alizee@lse.epita.fr>"
 set record = +Sent
+set postponed = +Drafts
 set sendmail="msmtp --read-envelope-from"
 set reverse_name
 set reverse_realname
