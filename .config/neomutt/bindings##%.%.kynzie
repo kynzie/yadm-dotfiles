@@ -33,6 +33,9 @@ bind pager g top
 bind pager G bottom
 bind attach,index g first-entry
 bind attach,index G last-entry
+set query_command="abook --mutt-query '%s'"
+macro index,pager \Ca "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+bind editor	<Tab> complete-query
 
 # --------------------------------------------------------------------------
 # Usenet FUNCTIONS - shown with an example mapping
