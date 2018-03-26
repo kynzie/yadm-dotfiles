@@ -34,6 +34,9 @@ virtual-mailboxes "  SAND" "notmuch://?query=tag:EPITA/2018/SAND"
 # Virtual mailbox for EPITA/2019
 virtual-mailboxes "2019" "notmuch://?query=tag:EPITA/2019"
 
+# Virtual mailbox for EPITA/2019/ML
+virtual-mailboxes "  ML" "notmuch://?query=tag:EPITA/2019/ML"
+
 # Virtual mailbox for EPITA/2019/PFE
 virtual-mailboxes "  PFE" "notmuch://?query=tag:EPITA/2019/PFE"
 
