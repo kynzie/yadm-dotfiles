@@ -7,7 +7,8 @@ ${CMD}lse-mls "tag:EPITA/LSE/ML-current or tag:EPITA/LSE/ML-permanents"
 
 ${CMD}epita-adm "tag:EPITA or tag:EPITA/Com or tag:EPITA/ADM"
 
-${CMD}acu-yaka "tag:EPITA/ACU-YAKA or tag:EPITA/ACU-YAKA/Gitlab"
+${CMD}acu-yaka "tag:EPITA/ACU-YAKA or tag:EPITA/ACU-YAKA/Gitlab or 	\
+		tag:EPITA/ACU-YAKA/RT"
 
 ${CMD}lec-prep	"tag:EPITA/LecturesPreparation or \
 		tag:EPITA/LecturesPreparation/SAND"
