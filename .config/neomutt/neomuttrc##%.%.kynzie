@@ -8,7 +8,7 @@ set nm_default_uri="notmuch:///home/kynzie/.mail/gmail"
 set realname = "Alizée Penel"
 set signature = $HOME/.signature
 set from = "Alizée Penel <alizee@lse.epita.fr>"
-set record = +Sent
+set record = +Inbox
 set postponed = +Drafts
 set sendmail="msmtp --read-envelope-from"
 set reverse_name
