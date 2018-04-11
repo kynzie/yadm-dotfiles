@@ -19,6 +19,9 @@ virtual-mailboxes "LSE" "notmuch://?query=tag:EPITA/LSE"
 # Virtual mailbox for LSE/Mailing Lists
 virtual-mailboxes "  Mailing lists" "notmuch://?query=query:lse-mls"
 
+# Virtual mailbox for LSE/Github
+virtual-mailboxes "  Github" "notmuch://?query=tag:EPITA/LSE/Github"
+
 # Virtual mailbox for EPITA/2018
 virtual-mailboxes "2018" "notmuch://?query=tag:EPITA/2018"
 
