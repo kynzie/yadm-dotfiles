@@ -161,3 +161,13 @@ bar {
 
 # lock screens
 bindsym $mod+o exec i3lock -e -c 00ced1
+
+# Change volume
+
+bindsym XF86AudioMute exec pulseaudio-ctl mute
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
+
+# Change brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
