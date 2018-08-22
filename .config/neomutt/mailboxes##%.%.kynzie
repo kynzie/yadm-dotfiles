@@ -70,6 +70,12 @@ virtual-mailboxes "    C1" "notmuch://?query=tag:EPITA/2022/Students/C1"
 # Virtual mailbox for EPITA/2022/C2
 virtual-mailboxes "    C2" "notmuch://?query=tag:EPITA/2022/Students/C2"
 
+# Virtual mailbox for EPITA/2023
+virtual-mailboxes "2023" "notmuch://?query=tag:EPITA/2023"
+
+# Virtual mailbox for EPITA/2023/Students
+virtual-mailboxes "  Students" "notmuch://?query=tag:EPITA/2023/Students"
+
 # Virtual mailbox for EPITA/Apprenticeship
 virtual-mailboxes "Apprenticeship" "notmuch://?query=tag:EPITA/Apprenticeship"
 
