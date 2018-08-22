@@ -8,9 +8,10 @@ filetype off                  " required
 
 silent! if plug#begin()
 	Plug 'airblade/vim-gitgutter'
-	Plug 'Valloric/YouCompleteMe'
+	Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang'}
 	Plug 'vim-scripts/cscope.vim'
 	Plug 'flazz/vim-colorschemes'
+	Plug 'Glench/Vim-Jinja2-Syntax'
 	call plug#end()
 endif
 
