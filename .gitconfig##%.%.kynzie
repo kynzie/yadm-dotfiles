@@ -93,3 +93,5 @@
 	wip = !git add -u && git commit -m "WIP"
 	test = !git push -n
 	amend = commit -a --amend
+[core]
+	excludesfile = .gitignore
