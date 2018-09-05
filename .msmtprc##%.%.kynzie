@@ -19,7 +19,7 @@ account        lse-alizee
 from           alizee@lse.epita.fr
 host           smtp.lse.epita.fr
 user           alizee.penel
-passwordeval   "pass show Work/EPITA/CRI/cri.epita.net"
+passwordeval   "pass show Work/EPITA/CRI/cri.epita.fr"
 auth           plain
 
 
