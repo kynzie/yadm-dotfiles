@@ -1,3 +1,19 @@
+function reshadow() {
+	local keydir="$(gpgconf --list-dirs homedir)/private-keys-v1.d"
+	if [ -d "${keydir}" ]; then
+		for key in $(find ${keydir} -name \*.key); do
+			if [ "$(head -c 24 $key | tail -c 20)" = "shadowed-private-key" ]; then
+				rm -f "$key"
+			fi
+		done
+		gpg --card-status &> /dev/null
+		echo "Done"
+	else
+		echo "GPG keydir not found" >&2
+		return 1
+	fi
+}
+
 if [ !"$SSH_CONNECTION" ] && [ "$SSH_TTY" != "$(tty)" ]; then
 	# Set GPG TTY
 	export GPG_TTY=$(tty)
