@@ -41,26 +41,6 @@ ${CMD}studies-epita-gistre	"tag:Studies/EPITA/GISTRE or 		\
 ${CMD}studies-epita-ing1	"tag:Studies/EPITA/ING1 or 		\
 				tag:Studies/EPITA/ING1/ACU-YAKA"
 
-${CMD}project	"tag:Studies/EPITA/ING1/Projects or 			\
-		tag:Studies/EPITA/ING1/Projects/42SH or			\
-		tag:Studies/EPITA/ING1/Projects/AtelierC++ or	\
-		tag:Studies/EPITA/ING1/Projects/Chess or 		\
-		tag:Studies/EPITA/ING1/Projects/Corewar or		\
-	       	tag:Studies/EPITA/ING1/Projects/Epitar or 		\
-		tag:Studies/EPITA/ING1/Projects/JDV or			\
-		tag:Studies/EPITA/ING1/Projects/K or 			\
-		tag:Studies/EPITA/ING1/Projects/Piscine or		\
-		tag:Studies/EPITA/ING1/Projects/RushJeuVideo or \
-		tag:Studies/EPITA/ING1/Projects/Tiger or		\
-		tag:Studies/EPITA/ING1/Projects/YakHospital or		\
-		tag:Studies/EPITA/ING1/Projects/Zik-end or		\
-		tag:Studies/EPITA/ING1/Projects/libstream or		\
-		tag:Studies/EPITA/ING1/Projects/malloc or		\
-		tag:Studies/EPITA/ING1/Projects/minimake or		\
-		tag:Studies/EPITA/ING1/Projects/myCipher or		\
-		tag:Studies/EPITA/ING1/Projects/myHTTPd  or		\
-		tag:Studies/EPITA/ING1/Projects/myReadISO"
-
 ${CMD}work	"tag:Work or tag:Work/Genymobile or 			\
 		tag:Work/Genymobile/PaySlips or tag:Work/IonisTutoring or \
 		tag:Work/IonisTutoring/Students or			\

@@ -158,7 +158,7 @@ virtual-mailboxes "  GISTRE" "notmuch://?query=query:studies-epita-gistre"
 virtual-mailboxes "  ING1" "notmuch://?query=query:studies-epita-ing1"
 
 # Virtual mailbox for Studies/EPITA/Projects
-virtual-mailboxes "    Projects" "notmuch://?query=query:project"
+virtual-mailboxes "    Projects" "notmuch://?query=tag:/Studies\/EPITA\/ING1\/Projects/"
 
 # Virtual mailbox for Studies/EPITA/SUP-SPE
 virtual-mailboxes "  SUP-SPE" "notmuch://?query=tag:Studies/EPITA/SUP-SPE"
