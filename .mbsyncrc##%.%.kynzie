@@ -5,6 +5,7 @@ PassCmd "pass show eMails/neomutt-gmail"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
+CopyArrivalDate yes
 IMAPStore gmail-remote
 Account gmail
 
