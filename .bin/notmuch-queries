@@ -8,10 +8,6 @@ ${CMD}epita-adm "tag:EPITA or tag:EPITA/Com or tag:EPITA/ADM"
 ${CMD}lec-prep	"tag:EPITA/LecturesPreparation or \
 		tag:EPITA/LecturesPreparation/SAND"
 
-${CMD}friends	"tag:Friends or tag:Friends/Dogs or tag:Friends/EPITA or 	\
-		tag:Friends/JDR-GN or tag:Friends/PrepaClass or	\
-		tag:Friends/sjbranleurs"
-
 ${CMD}lkml	"tag:KERNEL or tag:KERNEL/KernelNewbies		\
 		tag:KERNEL/LKML or tag:KERNEL/LinuxEmbedded"
 

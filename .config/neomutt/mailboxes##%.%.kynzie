@@ -104,7 +104,7 @@ virtual-mailboxes "Lectures Preparation" "notmuch://?query=query:lec-prep"
 virtual-mailboxes "Family" "notmuch://?query=tag:/Family/"
 
 # Virtual mailbox for Friends
-virtual-mailboxes "Friends" "notmuch://?query=query:friends"
+virtual-mailboxes "Friends" "notmuch://?query=tag:/Friends/"
 
 # Virtual mailbox for Publications
 virtual-mailboxes "Publications" "notmuch://?query=tag:Publications"
