@@ -6,3 +6,5 @@ _minted-*/
 *.tex
 *.vrb
 *.xdv
+*.o
+*.d
