@@ -116,7 +116,7 @@ virtual-mailboxes "Kernel" "notmuch://?query=tag:/KERNEL/"
 virtual-mailboxes "Perso" "notmuch://?query=tag:PersonalManagement"
 
 # Virtual mailbox for Perso/Bank
-virtual-mailboxes "  Bank" "notmuch://?query=query:bank"
+virtual-mailboxes "  Bank" "notmuch://?query=tag:/PersonalManagement\/Bank/"
 
 # Virtual mailbox for Perso/Flat
 virtual-mailboxes "  Flat" "notmuch://?query=query:flat"

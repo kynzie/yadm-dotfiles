@@ -8,9 +8,6 @@ ${CMD}epita-adm "tag:EPITA or tag:EPITA/Com or tag:EPITA/ADM"
 ${CMD}lec-prep	"tag:EPITA/LecturesPreparation or \
 		tag:EPITA/LecturesPreparation/SAND"
 
-${CMD}bank	"tag:PersonalManagement/Bank or 			\
-		tag:PersonalManagement/Bank/SG"
-
 ${CMD}flat	"tag:PersonalManagement/Flat or 			\
 		tag:PersonalManagement/Flat/EDF-GDF or	\
 		tag:PersonalManagement/Flat/Insurances or	\
