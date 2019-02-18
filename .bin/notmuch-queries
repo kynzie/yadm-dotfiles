@@ -16,7 +16,7 @@ ${CMD}flat	"tag:PersonalManagement/Flat or 			\
 ${CMD}internet-phone	"tag:PersonalManagement/Cellphone or	\
 			tag:PersonalManagement/Cellphone/Free or	\
 			tag:PersonalManagement/Flat/Internet or	\
-			tag:PersonalManagement/Flat/Internet/SFR"
+			tag:PersonalManagement/Flat/Internet/Free"
 
 
 ${CMD}shopping	"tag:E-shops or tag:E-shops/Alixexpress or 		\
@@ -77,7 +77,7 @@ ${CMD}work	"tag:Work or tag:Work/Genymobile or 			\
 		tag:Work/Playdigious or tag:Work/Thales"
 
 ${CMD}perso-old	"tag:PersonalManagement/Car or			\
-		tag:PersonalManagement/Flat/Internet/Free or	\
+		tag:PersonalManagement/Flat/Internet/SFR or	\
 		tag:PersonalManagement/Cellphone/SFR or	\
 		tag:PersonalManagement/Flat/CAF"
 
