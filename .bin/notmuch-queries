@@ -5,9 +5,6 @@ echo "Create notmuch queries for neomutt virtual mailbox"
 
 ${CMD}epita-adm "tag:EPITA or tag:EPITA/Com or tag:EPITA/ADM"
 
-${CMD}acu-yaka "tag:EPITA/ACU-YAKA or tag:EPITA/ACU-YAKA/Gitlab or 	\
-		tag:EPITA/ACU-YAKA/RT"
-
 ${CMD}lec-prep	"tag:EPITA/LecturesPreparation or \
 		tag:EPITA/LecturesPreparation/SAND"
 

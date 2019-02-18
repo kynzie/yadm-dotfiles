@@ -89,7 +89,13 @@ virtual-mailboxes "EpiLeaks" "notmuch://?query=tag:EPITA/EpiLeaks"
 virtual-mailboxes "ADM" "notmuch://?query=query:epita-adm"
 
 # Virtual mailbox for EPITA/ACU-YAKA
-virtual-mailboxes "ACU-YAKA" "notmuch://?query=query:acu-yaka"
+virtual-mailboxes "ACU-YAKA" "notmuch://?query=tag:EPITA/ACU-YAKA"
+
+# Virtual mailbox for EPITA/ACU-YAKA/Gitlab
+virtual-mailboxes "  Gitlab" "notmuch://?query=tag:EPITA/ACU-YAKA/Gitlab"
+
+# Virtual mailbox for EPITA/ACU-YAKA/RT
+virtual-mailboxes "  RT" "notmuch://?query=tag:EPITA/ACU-YAKA/RT"
 
 # Virtual mailbox for EPITA/Lectures Preparation
 virtual-mailboxes "Lectures Preparation" "notmuch://?query=query:lec-prep"
