@@ -10,14 +10,11 @@ virtual-mailboxes "Drafts" "notmuch://?query=tag:Drafts"
 # Virtual mailbox for Trash
 virtual-mailboxes "Trash" "notmuch://?query=tag:Trash"
 
-# Virtual mailbox for TODO
-virtual-mailboxes "TODO" "notmuch://?query=tag:ToDoQuickly"
-
 # Virtual mailbox for LSE
 virtual-mailboxes "LSE" "notmuch://?query=tag:EPITA/LSE"
 
 # Virtual mailbox for LSE/Mailing Lists
-virtual-mailboxes "  Mailing lists" "notmuch://?query=query:lse-mls"
+virtual-mailboxes "  Mailing lists" "notmuch://?query=tag:/EPITA\/LSE\/ML/"
 
 # Virtual mailbox for LSE/Github
 virtual-mailboxes "  Github" "notmuch://?query=tag:EPITA/LSE/Github"
