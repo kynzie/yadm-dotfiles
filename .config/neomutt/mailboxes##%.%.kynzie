@@ -101,7 +101,7 @@ virtual-mailboxes "  RT" "notmuch://?query=tag:EPITA/ACU-YAKA/RT"
 virtual-mailboxes "Lectures Preparation" "notmuch://?query=query:lec-prep"
 
 # Virtual mailbox for Family
-virtual-mailboxes "Family" "notmuch://?query=query:family"
+virtual-mailboxes "Family" "notmuch://?query=tag:/Family/"
 
 # Virtual mailbox for Friends
 virtual-mailboxes "Friends" "notmuch://?query=query:friends"
