@@ -110,7 +110,7 @@ virtual-mailboxes "Friends" "notmuch://?query=tag:/Friends/"
 virtual-mailboxes "Publications" "notmuch://?query=tag:Publications"
 
 # Virtual mailbox for LKML
-virtual-mailboxes "Kernel" "notmuch://?query=query:lkml"
+virtual-mailboxes "Kernel" "notmuch://?query=tag:/KERNEL/"
 
 # Virtual mailbox for Perso
 virtual-mailboxes "Perso" "notmuch://?query=tag:PersonalManagement"
