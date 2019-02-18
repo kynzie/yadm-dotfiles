@@ -52,6 +52,9 @@ virtual-mailboxes "2020" "notmuch://?query=tag:EPITA/2020"
 # Virtual mailbox for EPITA/2020/ProjetsLibres
 virtual-mailboxes "  Projets Libres" "notmuch://?query=tag:EPITA/2020/ProjetsLibres"
 
+# Virtual mailbox for EPITA/2021
+virtual-mailboxes "2021" "notmuch://?query=tag:EPITA/2021"
+
 # Virtual mailbox for EPITA/2022
 virtual-mailboxes "2022" "notmuch://?query=tag:EPITA/2022"
 
