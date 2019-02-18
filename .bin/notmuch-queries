@@ -19,13 +19,6 @@ ${CMD}internet-phone	"tag:PersonalManagement/Cellphone or	\
 			tag:PersonalManagement/Flat/Internet/Free"
 
 
-${CMD}shopping	"tag:E-shops or tag:E-shops/Alixexpress or 		\
-		tag:E-shops/Alloresto or tag:E-shops/Amazon or 		\
-		tag:E-shops/CDiscount or tag:E-shops/Ebay or 		\
-		tag:E-shops/Paypal or tag:E-shops/PriceMinister or 	\
-		tag:E-shops/RueDuCommerce or tag:E-shops/Uber or 	\
-		tag:E-shops/VideoGames"
-
 ${CMD}homelab	"tag:Homelab or tag:Homelab/Services"
 
 ${CMD}perso-others	"tag:PersonalManagement/EmployeeSavings or
