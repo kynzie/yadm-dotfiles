@@ -134,7 +134,7 @@ virtual-mailboxes "  Health" "notmuch://?query=tag:PersonalManagement/Health"
 virtual-mailboxes "  Shopping" "notmuch://?query=tag:/E-shops/"
 
 # Virtual mailbox for Perso/Homelab
-virtual-mailboxes "  Homelab" "notmuch://?query=query:homelab"
+virtual-mailboxes "  Homelab" "notmuch://?query=tag:/Homelab/"
 
 # Virtual mailbox for Perso/Others
 virtual-mailboxes "  Others" "notmuch://?query=query:perso-others"

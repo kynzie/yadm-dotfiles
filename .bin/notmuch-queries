@@ -19,8 +19,6 @@ ${CMD}internet-phone	"tag:PersonalManagement/Cellphone or	\
 			tag:PersonalManagement/Flat/Internet/Free"
 
 
-${CMD}homelab	"tag:Homelab or tag:Homelab/Services"
-
 ${CMD}perso-others	"tag:PersonalManagement/EmployeeSavings or
 			tag:PersonalManagement/Tignes"
 
