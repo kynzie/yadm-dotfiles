@@ -49,6 +49,9 @@ autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal softtabstop=4
 autocmd Filetype make setlocal noexpandtab
+autocmd Filetype c setlocal expandtab
+autocmd Filetype c setlocal shiftwidth=4
+autocmd FileType c setlocal softtabstop=4
 
 " Search
 set incsearch          " do incremental searching
