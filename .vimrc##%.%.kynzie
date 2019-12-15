@@ -53,6 +53,9 @@ autocmd Filetype c setlocal expandtab
 autocmd Filetype c setlocal shiftwidth=4
 autocmd FileType c setlocal softtabstop=4
 
+" Trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+
 " Search
 set incsearch          " do incremental searching
 hi IncSearch guifg=#0099ff
