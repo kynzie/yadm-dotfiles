@@ -65,3 +65,5 @@ hi Search guibg=#0099ff
 
 " Spell Chacking
 set spell spelllang=en_us,fr
+
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
