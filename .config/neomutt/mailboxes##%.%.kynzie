@@ -133,6 +133,9 @@ virtual-mailboxes "  Taxes" "notmuch://?query=tag:PersonalManagement/Taxes"
 # Virtual mailbox for Perso/Health
 virtual-mailboxes "  Health" "notmuch://?query=tag:PersonalManagement/Health"
 
+# Virtual mailbox for Perso/Pets
+virtual-mailboxes "  Pets" "notmuch://?query=tag:PersonalManagement/Pets"
+
 # Virtual mailbox for Perso/Shopping
 virtual-mailboxes "  Shopping" "notmuch://?query=tag:/E-shops/"
 
