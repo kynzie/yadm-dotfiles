@@ -93,5 +93,7 @@
 	wip = !git add -u && git commit -m "WIP"
 	test = !git push -n
 	amend = commit -a --amend
+[http]
+	cookiefile = /home/kynzie/.gitcookies
 [core]
 	excludesfile = /home/kynzie/.gitignore
