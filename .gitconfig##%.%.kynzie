@@ -78,6 +78,8 @@
 	ck = checkout
 	br = branch
 	co = commit -s
+	coa = commit -s --amend
+	chp = cherry-pick
 	st = status
 	rb = rebase
 	rst = reset
