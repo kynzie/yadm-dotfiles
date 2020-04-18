@@ -11,6 +11,9 @@ silent! if plug#begin()
 	Plug 'vim-scripts/cscope.vim'
 	Plug 'flazz/vim-colorschemes'
 	Plug 'Glench/Vim-Jinja2-Syntax'
+	Plug 'tpope/vim-surround'
+	Plug 'vim-pandoc/vim-pandoc-syntax'
+	Plug 'tpope/vim-fugitive'
 	call plug#end()
 endif
 
@@ -28,6 +31,9 @@ set backspace=indent,eol,start
 
 " Format line
 set textwidth=80
+
+" Enable menu for commandline completion
+set wildmenu
 
 """""""""""""""""""""""""""""""" Vim Appearance """"""""""""""""""""""""""""""""
 if has("gui_running")
