@@ -1,0 +1,63 @@
+hi clear
+set background=dark
+if exists("syntax_on")
+  syntax reset
+endif
+
+let g:colors_name = "kynzie"
+
+hi Normal			ctermfg=255		ctermbg=234				guifg=grey93		guibg=grey11
+hi Scrollbar											guifg=darkcyan		guibg=cyan
+hi Menu												guifg=black		guibg=cyan
+hi SpecialKey	cterm=NONE	ctermfg=238							guifg=grey27
+hi NonText	cterm=bold	ctermfg=darkred					gui=bold	guifg=blue
+hi Directory	cterm=bold	ctermfg=brown							guifg=blue
+hi ErrorMsg	cterm=bold	ctermfg=red		ctermbg=234		gui=bold	guifg=red		guibg=grey11
+hi Search			ctermfg=214		ctermbg=red				guifg=orange1		guibg=red
+hi MoreMsg	cterm=bold	ctermfg=darkgreen				gui=bold	guifg=seaGreen
+hi ModeMsg	cterm=bold							gui=bold	guifg=white		guibg=blue
+hi LineNr	cterm=NONE	ctermfg=245							guifg=grey54
+hi Question	cterm=bold	ctermfg=darkgreen				gui=bold	guifg=green
+hi StatusLine	cterm=bold	ctermfg=lightblue	ctermbg=white		gui=bold	guifg=blue		guibg=white
+hi StatusLineNC			ctermfg=white		ctermbg=lightblue			guifg=white		guibg=blue
+hi Title	cterm=bold	ctermfg=darkmagenta				gui=bold	guifg=magenta
+hi Visual	cterm=reverse				ctermbg=241		gui=reverse				guibg=gray39
+hi WarningMsg	cterm=bold	ctermfg=darkblue						guifg=red
+hi Cursor											guifg=bg		guibg=green
+hi Comment	cterm=NONE	ctermfg=247							guifg=grey62
+hi Constant	cterm=NONE	ctermfg=39							guifg=deepskyblue1
+hi Special	cterm=bold	ctermfg=red							guifg=orange
+hi Identifier			ctermfg=brown							guifg=#40ffff
+hi Statement	cterm=bold	ctermfg=220					gui=bold	guifg=gold1
+hi PreProc			ctermfg=62							guifg=slateblue3
+hi Type		cterm=bold	ctermfg=41					gui=bold	guifg=springgreen3
+hi Error			ctermfg=red		ctermbg=NONE				guifg=red		guibg=NONE
+hi Todo				ctermfg=black		ctermbg=darkcyan			guifg=blue		guibg=yellow
+hi Todo		cterm=bold	ctermfg=16		ctermbg=208		gui=bold	guifg=black		guibg=darkorange
+hi SpellBad	cterm=underline	ctermfg=red		ctermbg=NONE		gui=underline	guifg=red
+
+hi link IncSearch	Visual
+hi link String		Constant
+hi link Character	Constant
+hi link Number		Constant
+hi link Boolean		Constant
+hi link Float		Number
+hi link Function	Identifier
+hi link Conditional	Statement
+hi link Repeat		Statement
+hi link Label		Statement
+hi link Operator	Statement
+hi link Keyword		Statement
+hi link Exception	Statement
+hi link Include		PreProc
+hi link Define		PreProc
+hi link Macro		PreProc
+hi link PreCondit	PreProc
+hi link StorageClass	Type
+hi link Structure	Type
+hi link Typedef		Type
+hi link Tag		Special
+hi link SpecialChar	Special
+hi link Delimiter	Special
+hi link SpecialComment	Special
+hi link Debug		Special
