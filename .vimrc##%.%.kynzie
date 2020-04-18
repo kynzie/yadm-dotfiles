@@ -3,8 +3,7 @@ if empty(glob("~/.vim/autoload/plug.vim"))
 	autocmd VimEnter * silent! PlugInstall
 endif
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
 
 silent! if plug#begin()
 	Plug 'airblade/vim-gitgutter'
@@ -15,55 +14,78 @@ silent! if plug#begin()
 	call plug#end()
 endif
 
-filetype plugin indent on    " required
+" Select text with mouse
+set mouse=a
 
-set mouse=
-set encoding=utf-8 fileencodings=
-set backspace=2
+" Set highlight search
+set hlsearch
 
-syntax on
+" Do incremental searching
+set incsearch
 
-" Vim appearance
+set encoding=utf-8 fileencodings=utf-8,ucs-bom,utf-16le,default,latin1
+set backspace=indent,eol,start
+
+" Format line
+set textwidth=80
+
+"""""""""""""""""""""""""""""""" Vim Appearance """"""""""""""""""""""""""""""""
 if has("gui_running")
-  set guifont=DejaVu\ Sans\ Mono\ 8
+  set guifont=DejaVu\ Sans\ Mono\ 9
   set guioptions-=T
   set guioptions-=r
   set guioptions-=m
-  set mouse=a
 endif
 
+syntax on
+
+" Theme
 set background=dark
-colorscheme koehler
+colorscheme kynzie
 
-set textwidth=80
-
-set colorcolumn=+1
-hi ColorColumn guibg=#2d2d2d
-
+" Enable line numbers
 set number
-hi LineNr guifg=#8d8d8d
 
-" Indent
-set smartindent
+" Set a colored column at 81th character
+set colorcolumn=+1
+hi ColorColumn ctermbg=235 guibg=grey15
+
+" Set colors for git symbols in left column
+hi GitGutterAdd		cterm=NONE	ctermfg=34	guifg=green3
+hi GitGutterDelete	cterm=bold	ctermfg=21	guifg=blue1
+hi GitGutterChange	cterm=NONE	ctermfg=220	guifg=gold1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""" Indent and Whitespaces """"""""""""""""""""""""""""
+filetype plugin indent on
+
+" Do not convert tabs into spaces
+set noexpandtab
+" Try to keep the current file indent
+set preserveindent
+" Try to copy the current file indent
+set copyindent
+" Tab size
+set tabstop=8
+" Column numbers used for a re indent
+set shiftwidth=8
+" Tab size (padding with spaces)
+set softtabstop=8
+
 autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal softtabstop=4
-autocmd Filetype make setlocal noexpandtab
-autocmd Filetype c setlocal expandtab
-autocmd Filetype c setlocal shiftwidth=4
-autocmd FileType c setlocal softtabstop=4
 
-" Trailing whitespace
+" Show tabs and end-of-line spaces
+set list listchars=tab:»·,trail:·
+
+" Remove all trailing whitespaces
 autocmd BufWritePre * %s/\s\+$//e
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Search
-set incsearch          " do incremental searching
-hi IncSearch guifg=#0099ff
-
-set hlsearch           " highlight search
-hi Search guibg=#0099ff
-
-" Spell Chacking
-set spell spelllang=en_us,fr
+" Spell Checking
+autocmd FileType mail setlocal spell spelllang=en_us,fr
+autocmd FileType rst setlocal spell spelllang=en_us,fr
+autocmd FileType markdown setlocal spell spelllang=en_us,fr
 
 let g:ycm_global_ycm_extra_conf = '$HOME/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
