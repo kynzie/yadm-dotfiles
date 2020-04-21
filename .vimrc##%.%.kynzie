@@ -6,14 +6,14 @@ endif
 set nocompatible
 
 silent! if plug#begin()
-	Plug 'airblade/vim-gitgutter'
-	Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang'}
 	Plug 'vim-scripts/cscope.vim'
 	Plug 'flazz/vim-colorschemes'
+	Plug 'tpope/vim-fugitive'
+	Plug 'airblade/vim-gitgutter'
 	Plug 'Glench/Vim-Jinja2-Syntax'
 	Plug 'tpope/vim-surround'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
-	Plug 'tpope/vim-fugitive'
+	Plug 'Valloric/YouCompleteMe', {'do': './install.py --clang-completer --system-libclang'}
 	call plug#end()
 endif
 
