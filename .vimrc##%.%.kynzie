@@ -82,6 +82,11 @@ autocmd FileType python setlocal expandtab
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType python setlocal softtabstop=4
 
+" Set ocaml completion and indentation
+set rtp+=/usr/share/merlin/vim
+set rtp^=/usr/share/ocp-indent/vim
+let g:syntastic_ocaml_checkers = ['merlin']
+
 " Show tabs and end-of-line spaces
 set list listchars=tab:»·,trail:·
 

@@ -1,0 +1,10 @@
+base = 3
+type = 3
+in = 3
+with = 3
+match_clause = 7
+ppx_stritem_ext = 3
+max_indent = none
+strict_else = always
+strict_with = always
+align_params = always
