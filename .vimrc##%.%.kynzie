@@ -7,6 +7,8 @@ set nocompatible
 
 silent! if plug#begin()
 	Plug 'vim-scripts/cscope.vim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
 	Plug 'flazz/vim-colorschemes'
 	Plug 'nvie/vim-flake8'
 	Plug 'tpope/vim-fugitive'
@@ -49,6 +51,10 @@ syntax on
 " Theme
 set background=dark
 colorscheme kynzie
+
+" The statusbar should appear all the time
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
 " Enable line numbers
 set number
