@@ -226,6 +226,6 @@ exec --no-startup-id "xterm -name mutt -e neomutt"
 assign [class="Google-chrome"] 1
 assign [class="^XTerm$" instance="^mutt$"] 9
 
-for_window [class="todoist"] move container to workspace 10
-for_window [class="Franz"]   move container to workspace 10
-for_window [class="Franz"]   focus, move left, resize set width 1412
+for_window [class="^todoist$"] move container to workspace 10
+for_window [class="^Franz$"]   move container to workspace 10
+for_window [class="^Franz$"]   focus, move left, resize set width 1412
