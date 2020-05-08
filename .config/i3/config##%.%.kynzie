@@ -222,9 +222,11 @@ exec --no-startup-id franz
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id todoist
 exec --no-startup-id "xterm -name mutt -e neomutt"
+exec --no-startup-id "xterm -name irc -e weechat"
 
 assign [class="Google-chrome"] 1
 assign [class="^XTerm$" instance="^mutt$"] 9
+assign [class="^XTerm$" instance="^irc$"] 8
 
 for_window [class="^todoist$"] move container to workspace 10
 for_window [class="^Franz$"]   move container to workspace 10
