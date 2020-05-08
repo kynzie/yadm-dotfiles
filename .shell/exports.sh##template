@@ -14,9 +14,9 @@ else
         export HISTTIMEFORMAT="%d/%m/%y %T "
 fi
 
-{% if YADM_USER == 'kynzie' -%}
+{% if yadm.user == "kynzie" %}
 export NNTPSERVER=news.epita.fr
 export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.bin:$GOPATH/bin
 export NO_AT_BRIDGE=1
-{% endif -%}
+{% endif %}

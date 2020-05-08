@@ -1,4 +1,4 @@
-{% if YADM_USER == 'kynzie' -%}
+{% if yadm.user == "kynzie" %}
 parse_git_branch() {
     git_status="$(git status 2> /dev/null)"
     branch_pattern="^On branch ([^${PMT_SEP}]*)"
@@ -37,7 +37,7 @@ parse_git_branch() {
 parse_scm() {
     git rev-parse --git-dir &> /dev/null && parse_git_branch
 }
-{% endif -%}
+{% endif %}
 
 prompt_setup() {
     RET=$?
