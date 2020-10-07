@@ -60,3 +60,15 @@ prompt_setup() {
         echo -n "${prompt1}${prompt2}\n${prompt3}${on_ssh_session} ${RED}\$${COLOR_NONE} "
     fi
 }
+
+set_ps1(){
+    local prefix
+    local futur_ps1
+    if [ ! -z "${VIRTUAL_ENV}" ]; then
+        prefix=`basename ${VIRTUAL_ENV}`
+        prefix="${YELLOW}(${prefix})${COLOR_NONE}"
+    fi
+
+    futur_ps1=`prompt_setup`
+    PS1="${prefix}${futur_ps1}"
+}

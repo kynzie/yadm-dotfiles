@@ -21,14 +21,10 @@ PMT_SEP=$'\n'
 
 . $HOME/.shellrc
 
-prompt_precmd() {
-	PROMPT='$(prompt_setup)'
-}
-
 setopt prompt_subst
 autoload -Uz add-zsh-hook
 prompt_opts=(cr subst percent)
-add-zsh-hook precmd prompt_precmd
+add-zsh-hook precmd set_ps1
 
 for conf in $HOME/.zsh/**.zsh; do
 	source $conf
