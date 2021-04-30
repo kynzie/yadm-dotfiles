@@ -28,7 +28,7 @@ PMT_SEP=$IFS
 
 . $HOME/.shellrc
 
-PROMPT_COMMAND=setup_ps1
+PROMPT_COMMAND=set_ps1
 
 {% if yadm.user == "kynzie" %}
 # Add completion even with sudo
