@@ -30,7 +30,7 @@ PMT_SEP=$IFS
 
 PROMPT_COMMAND=setup_ps1
 
-{% if YADM_USER == 'kynzie' -%}
+{% if yadm.user == "kynzie" %}
 # Add completion even with sudo
 complete -cf sudo
 
@@ -50,4 +50,4 @@ if [ -d $BASH_CMPL_DIR ]; then
 fi
 unset BASH_CMPL_DIR
 unset BASH_CMD_CACH
-{% endif -%}
+{% endif %}
