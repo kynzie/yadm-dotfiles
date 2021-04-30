@@ -4,7 +4,7 @@ export HISTCONTROL=ignoredups,erasedups
 export MAILCHECK=-1
 export EDITOR="vim"
 
-xset -b
+set bell-style none
 
 if [[ $SHELL == */zsh ]]; then
         export HISTFILE=$HOME/.history
