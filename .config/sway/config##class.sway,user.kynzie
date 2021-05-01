@@ -296,4 +296,7 @@ input "type:keyboard" {
     xkb_options caps:swapescape,compose:ralt,grp:ctrls_toggle
 }
 
+# Mouse config
+seat * hide_cursor 5000
+
 include /etc/sway/config.d/*
