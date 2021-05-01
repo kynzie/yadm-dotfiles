@@ -288,4 +288,12 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym XF86MonBrightnessUp exec brightnessctl -e s 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl -e s 5%-
 
+# Keyboard config
+# man 5 sway-input
+# xkeyboard-config
+input "type:keyboard" {
+    xkb_layout us,fr
+    xkb_options caps:swapescape,compose:ralt,grp:ctrls_toggle
+}
+
 include /etc/sway/config.d/*
