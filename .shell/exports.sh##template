@@ -19,3 +19,4 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$HOME/.bin:$GOPATH/bin
 export NO_AT_BRIDGE=1
 {% endif %}
+export _JAVA_AWT_WM_NONREPARENTING=1
