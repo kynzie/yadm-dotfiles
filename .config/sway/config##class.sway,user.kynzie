@@ -324,4 +324,9 @@ for_window [con_mark="video_overlay"] {
 }
 no_focus [con_mark="video_overlay"]
 
+#
+# Start up
+#
+exec kanshi
+
 include /etc/sway/config.d/*
