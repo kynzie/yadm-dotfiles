@@ -210,13 +210,13 @@ bindsym $mod+o exec i3lock -e -c 00ced1
 
 # Change volume
 
-bindsym XF86AudioMute exec pulseaudio-ctl mute
-bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
-bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 # Change brightness
-bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
-bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl -e s 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl -e s 5%-
 
 # Start up
 exec --no-startup-id franz
