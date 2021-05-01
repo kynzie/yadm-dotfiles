@@ -20,7 +20,9 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+### Font
 #
+font pango:monospace 8
 
 ### Input configuration
 #
