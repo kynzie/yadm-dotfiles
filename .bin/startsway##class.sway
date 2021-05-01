@@ -1,0 +1,12 @@
+#!/bin/sh
+
+export LIBVA_DRIVER_NAME=iHD
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
+export CLUTTER_BACKEND=wayland
+export SDL_VIDEODRIVER=wayland
+export XDG_CURRENT_DESKTOP=sway
+
+exec sway $@
+
+# vim: ft=sh
