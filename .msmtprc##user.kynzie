@@ -16,7 +16,7 @@ passwordeval   "pass show eMails/neomutt-gmail"
 # LSE
 account        lse-alizee
 from           alizee@lse.epita.fr
-host           smtp.lse.epita.fr
+host           mail.cri.epita.fr
 user           alizee.penel
 passwordeval   "pass show Work/EPITA/CRI/cri.epita.fr"
 auth           plain
