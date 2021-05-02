@@ -23,7 +23,7 @@ Near :gmail-local:
 Patterns * ![Gmail]* !KERNEL* !Chats !Drafts !Sent !Spam !Trash !Inbox
 
 Channel gmail-inbox
-Far :gmail-remote:Inbox
+Far :gmail-remote:INBOX
 Near :gmail-local:Inbox
 
 Channel gmail-chats
