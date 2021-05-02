@@ -3,7 +3,6 @@ defaults
 auth           on
 tls            on
 tls_trust_file /etc/ssl/certs/ca-certificates.crt
-#tls_certcheck off
 logfile        ~/.msmtp.log
 port           587
 
