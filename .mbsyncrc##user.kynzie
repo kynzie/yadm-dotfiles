@@ -1,3 +1,7 @@
+Create Both
+SyncState *
+CopyArrivalDate yes
+
 IMAPAccount gmail
 Host imap.gmail.com
 User alizee.penel@gmail.com
@@ -5,7 +9,6 @@ PassCmd "pass show eMails/neomutt-gmail"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-CopyArrivalDate yes
 IMAPStore gmail-remote
 Account gmail
 
@@ -42,7 +45,3 @@ Slave :gmail-local:Spam
 Channel gmail-trash
 Master :gmail-remote:"[Gmail]/Trash"
 Slave :gmail-local:Trash
-
-
-Create Both
-SyncState *
