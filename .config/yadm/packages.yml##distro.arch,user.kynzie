@@ -4,6 +4,7 @@ yay:
     - zsh
     - bash
   window-manger:
+    - dmenu
     - i3-wm:
       - i3lock
       - i3status
@@ -28,6 +29,7 @@ yay:
     - msmtp
     - notmuch-runtime
     - noto-fonts-emoji
+    - xdg-utils
 
 go:
   emails:
