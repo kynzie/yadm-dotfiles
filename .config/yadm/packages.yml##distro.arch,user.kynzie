@@ -1,0 +1,35 @@
+---
+yay:
+  shell:
+    - zsh
+    - bash
+  window-manger:
+    - i3-wm:
+      - i3lock
+      - i3status
+      - xterm
+      - autorandr
+    - sway:
+      - swaylock
+      - swayidle
+      - alacritty
+      - kanshi
+  editor:
+    - vim
+    # vim plugins
+    - cscope
+    - cmake
+    - clang
+    - merlin
+    - ocaml-ocp-indent
+  emails:
+    - neomutt
+    - isync
+    - msmtp
+    - notmuch-runtime
+    - noto-fonts-emoji
+
+go:
+  emails:
+    - mblabelsync:
+      - "git github.com/xdbob/mblabelsync"
