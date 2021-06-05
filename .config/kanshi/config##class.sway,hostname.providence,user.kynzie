@@ -5,5 +5,5 @@ profile alone {
 profile home {
   output "Iiyama North America PLX2483H 1127942403754" enable position 0,0
   output "Iiyama North America PLX2483H 1127942403743" enable position 1920,0
-  output "Unknown 0x243D 0x00000000" enable position 3840,0
+  output "Unknown 0x243D 0x00000000" disable #enable position 3840,0
 }
