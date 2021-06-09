@@ -14,7 +14,6 @@ alias grep='grep --color'
 alias egrep='egrep --color'
 alias ssh='TERM=xterm-256color ssh'
 alias klog='dmesg --color=always | less -R'
-alias mdkir='mkdir'
 
 {% if yadm.user == "kynzie" %}
 alias gitk='gitk --all &'
@@ -24,6 +23,9 @@ alias gpg='gpg2'
 alias z='zathura'
 alias switch='synergyc -f 192.168.1.20'
 alias gnucash='LANG=fr_FR.utf8 gnucash'
+alias mdkir='mkdir'
+alias 'updatetty'='gpg-connect-agent updatestartuptty /bye'
+alias mount-transmission='sudo mount -vvv -t nfs -o nfsvers=3,proto=tcp paradise.local:/srv/transmission'
 {% else %}
 alias v="$EDITOR"
 {% endif %}
