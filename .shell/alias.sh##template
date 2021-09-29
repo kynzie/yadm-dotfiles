@@ -25,7 +25,7 @@ alias switch='synergyc -f 192.168.1.20'
 alias gnucash='LANG=fr_FR.utf8 gnucash'
 alias mdkir='mkdir'
 alias 'updatetty'='gpg-connect-agent updatestartuptty /bye'
-alias mount-transmission='sudo mount -vvv -t nfs -o nfsvers=3,proto=tcp paradise.local:/srv/transmission'
+alias mount-transmission='sudo mount -t nfs -o nfsvers=3,proto=tcp paradise.local:/srv/transmission'
 {% else %}
 alias v="$EDITOR"
 {% endif %}
