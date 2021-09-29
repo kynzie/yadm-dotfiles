@@ -23,8 +23,8 @@ auth           plain
 
 
 # Bocal
-account	       epita-alizee
-from	       alizee.penel@epita.fr
+account        epita-alizee
+from           alizee.penel@epita.fr
 host           smtp.office365.com
 user           alizee.penel@epita.fr
 passwordeval   "pass show Work/EPITA/epita.fr"
