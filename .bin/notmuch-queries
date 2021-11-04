@@ -3,71 +3,81 @@
 CMD="notmuch config set query."
 echo "Create notmuch queries for neomutt virtual mailbox"
 
-${CMD}epita-adm "tag:EPITA or tag:EPITA/Com or tag:EPITA/ADM"
+${CMD}epita-adm		"tag:EPITA or						\
+			tag:EPITA/Com or					\
+			tag:EPITA/ADM or					\
+			tag:EPITA/Relations-Entreprises"
 
-${CMD}lec-prep	"tag:EPITA/LecturesPreparation or \
+${CMD}epita-lse-ml	"tag:EPITA/LSE/ML-current or				\
+			tag:EPITA/LSE/ML-permanents or				\
+			tag:EPITA/LSE/ML-systeme or				\
+			tag:EPITA/LSE/ML-all"
+
+${CMD}lec-prep	"tag:EPITA/LecturesPreparation or				\
 		tag:EPITA/LecturesPreparation/SAND"
 
-${CMD}flat	"tag:PersonalManagement/Flat or 			\
-		tag:PersonalManagement/Flat/EDF-GDF or	\
-		tag:PersonalManagement/Flat/Insurances or	\
+${CMD}flat	"tag:PersonalManagement/Flat or					\
+		tag:PersonalManagement/Flat/EDF-GDF or				\
+		tag:PersonalManagement/Flat/Insurances or			\
 		tag:PersonalManagement/Flat/Rent"
 
-${CMD}internet-phone	"tag:PersonalManagement/Cellphone or	\
-			tag:PersonalManagement/Cellphone/Free or	\
-			tag:PersonalManagement/Flat/Internet or	\
+${CMD}internet-phone	"tag:PersonalManagement/Cellphone or			\
+			tag:PersonalManagement/Cellphone/Free or		\
+			tag:PersonalManagement/Flat/Internet or			\
 			tag:PersonalManagement/Flat/Internet/Free"
 
 
-${CMD}perso-others	"tag:PersonalManagement/EmployeeSavings or
+${CMD}perso-others	"tag:PersonalManagement/EmployeeSavings or		\
 			tag:PersonalManagement/Tignes"
 
-${CMD}studies-epita-adm	"tag:Studies/EPITA/ADM or 			\
-			tag:Studies/EPITA/Business or	\
-			tag:Studies/EPITA/Com or	\
-			tag:Studies/EPITA/Intranet or	\
+${CMD}studies-epita-adm	"tag:Studies/EPITA/ADM or				\
+			tag:Studies/EPITA/Business or				\
+			tag:Studies/EPITA/Com or				\
+			tag:Studies/EPITA/Intranet or				\
 			tag:Studies/EPITA/MSDNA"
 
-${CMD}studies-epita-assos	"tag:Studies/EPITA/Assos or		\
-				tag:Studies/EPITA/Assos/EPTV or	\
-				tag:Studies/EPITA/Assos/Ephemere or	\
+${CMD}studies-epita-assos	"tag:Studies/EPITA/Assos or			\
+				tag:Studies/EPITA/Assos/EPTV or			\
+				tag:Studies/EPITA/Assos/Ephemere or		\
 				tag:Studies/EPITA/Assos/Others"
 
-${CMD}studies-epita-gistre	"tag:Studies/EPITA/GISTRE or 		\
-				tag:Studies/EPITA/GISTRE/ML or
-				tag:Studies/EPITA/GISTRE/Kaneton or 	\
+${CMD}studies-epita-gistre	"tag:Studies/EPITA/GISTRE or			\
+				tag:Studies/EPITA/GISTRE/ML or			\
+				tag:Studies/EPITA/GISTRE/Kaneton or		\
 				tag:Studies/EPITA/GISTRE/PFE"
 
-${CMD}studies-epita-ing1	"tag:Studies/EPITA/ING1 or 		\
+${CMD}studies-epita-ing1	"tag:Studies/EPITA/ING1 or			\
 				tag:Studies/EPITA/ING1/ACU-YAKA"
 
-${CMD}work	"tag:Work or tag:Work/Genymobile or 			\
-		tag:Work/Genymobile/PaySlips or tag:Work/IonisTutoring or \
-		tag:Work/IonisTutoring/Students or			\
-		tag:Studies/EPITA/Business/Interships/Offers or 	\
-		tag:Work/Playdigious or tag:Work/Thales"
+${CMD}work	"tag:Work or tag:Work/Genymobile or				\
+		tag:Work/Genymobile/PaySlips or					\
+		tag:Work/IonisTutoring or					\
+		tag:Work/IonisTutoring/Students or				\
+		tag:Studies/EPITA/Business/Interships/Offers or			\
+		tag:Work/Playdigious or						\
+		tag:Work/Thales"
 
-${CMD}perso-old	"tag:PersonalManagement/Car or			\
-		tag:PersonalManagement/Flat/Internet/SFR or	\
-		tag:PersonalManagement/Cellphone/SFR or	\
+${CMD}perso-old	"tag:PersonalManagement/Car or					\
+		tag:PersonalManagement/Flat/Internet/SFR or			\
+		tag:PersonalManagement/Cellphone/SFR or				\
 		tag:PersonalManagement/Flat/CAF"
 
-${CMD}epita-old	"tag:EPITA/FinishedMissions or 			\
-		tag:EPITA/FinishedMissions/Apprentices-2017 or	\
-		tag:EPITA/FinishedMissions/Apprentices-2017/Engineers or \
-		tag:EPITA/FinishedMissions/Apprentices-2017/Experts or \
-		tag:EPITA/FinishedMissions/Apprentices-2018 or	\
-		tag:EPITA/FinishedMissions/Apprentices-2018/Engineers or \
-		tag:EPITA/FinishedMissions/Apprentices-2018/Experts or   \
-		tag:EPITA/FinishedMissions/Apprentices-2019 or	\
-		tag:EPITA/FinishedMissions/Apprentices-2019/Engineers or \
-		tag:EPITA/FinishedMissions/Apprentices-2019/Experts or   \
-		tag:EPITA/FinishedMissions/Cumulatifs or		\
-		tag:EPITA/FinishedMissions/EvaluationBook or	\
-		tag:EPITA/FinishedMissions/ING1ExamsProofreading or    \
-		tag:EPITA/FinishedMissions/SAND-2015 or		\
-		tag:EPITA/FinishedMissions/SAND-2016 or		\
+${CMD}epita-old	"tag:EPITA/FinishedMissions or					\
+		tag:EPITA/FinishedMissions/Apprentices-2017 or			\
+		tag:EPITA/FinishedMissions/Apprentices-2017/Engineers or	\
+		tag:EPITA/FinishedMissions/Apprentices-2017/Experts or		\
+		tag:EPITA/FinishedMissions/Apprentices-2018 or			\
+		tag:EPITA/FinishedMissions/Apprentices-2018/Engineers or	\
+		tag:EPITA/FinishedMissions/Apprentices-2018/Experts or		\
+		tag:EPITA/FinishedMissions/Apprentices-2019 or			\
+		tag:EPITA/FinishedMissions/Apprentices-2019/Engineers or	\
+		tag:EPITA/FinishedMissions/Apprentices-2019/Experts or		\
+		tag:EPITA/FinishedMissions/Cumulatifs or			\
+		tag:EPITA/FinishedMissions/EvaluationBook or			\
+		tag:EPITA/FinishedMissions/ING1ExamsProofreading or		\
+		tag:EPITA/FinishedMissions/SAND-2015 or				\
+		tag:EPITA/FinishedMissions/SAND-2016 or				\
 		tag:EPITA/FinishedMissions/SAND-2017"
 
-${CMD}web-accounts	"tag:Web or tag:Web/Facebook or tag:Web/Twitter or \
-			tag:Web/Others "
+${CMD}web-accounts	"tag:Web or tag:Web/Facebook or tag:Web/Twitter or	\
+			tag:Web/Others"

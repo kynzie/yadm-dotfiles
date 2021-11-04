@@ -1,6 +1,6 @@
 text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump %s; nametemplate=%s.html; copiousoutput
 application/pdf; mutt_bgrun zathura %s 2> /dev/null
-image/*; mutt_bgrun meh %s 2> /dev/null
+image/*; mutt_bgrun imv %s 2> /dev/null
 
 application/vnd.oasis.opendocument.database; mutt_bgrun soffice --nologo -base '%s'; edit=mutt_bgrun soffice --nologo -base '%s'; test=test -n "$DISPLAY"; description="OpenDocument Database"; nametemplate=%s.odb
 application/vnd.oasis.opendocument.chart; mutt_bgrun soffice --nologo --calc '%s'; edit=mutt_bgrun soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="OpenDocument Chart"; nametemplate=%s.odc
