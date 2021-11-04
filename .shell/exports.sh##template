@@ -18,7 +18,7 @@ export NNTPSERVER=news.epita.fr
 export GOPATH=$HOME/.go
 
 if [[ -d $HOME/.local/share/gem ]]; then
-	local ruby_path=$HOME/.local/share/gem/ruby/
+	ruby_path=$HOME/.local/share/gem/ruby/
 	RUBY_PATH=:$ruby_path$(ls --color=never -1 $ruby_path | tail -n 1)bin
 fi
 

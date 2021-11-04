@@ -25,6 +25,7 @@ setopt prompt_subst
 autoload -Uz add-zsh-hook
 prompt_opts=(cr subst percent)
 add-zsh-hook precmd set_ps1
+setopt interactivecomments
 
 for conf in $HOME/.zsh/**.zsh; do
 	source $conf
