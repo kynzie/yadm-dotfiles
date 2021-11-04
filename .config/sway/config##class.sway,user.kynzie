@@ -158,6 +158,11 @@ font pango:monospace 8
     bindsym $mod+Mod1+Shift+8 rename workspace to 18
     bindsym $mod+Mod1+Shift+9 rename workspace to 19
     bindsym $mod+Mod1+Shift+0 rename workspace to 20
+
+    bindsym $mod+Control+Shift+Right move workspace to output right
+    bindsym $mod+Control+Shift+Left move workspace to output left
+    bindsym $mod+Control+Shift+Down move workspace to output down
+    bindsym $mod+Control+Shift+Up move workspace to output up
 #
 # Layout stuff:
 #
