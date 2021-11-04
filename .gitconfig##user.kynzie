@@ -82,7 +82,8 @@
 	chp = cherry-pick
 	st = status
 	rb = rebase
-	rst = reset
+	rzt = reset
+	rZt = reset --hard
 	a = add
 	ap = add -p
 	l = log --decorate
@@ -90,11 +91,15 @@
 	df = diff
 	visual = !gitk --all
 	last = log -1 HEAD
-	rbi = rebase -i
+	rbi = rebase --autosquash -i
 	save = !git add -A && git commit -m 'SAVEPOINT'
 	wip = !git add -u && git commit -m "WIP"
 	test = !git push -n
-	amend = commit -a --amend
+	sw = switch
+	swc = switch -c
+	rst = restore
+	rstS = restore -S
+
 [http]
 	cookiefile = /home/kynzie/.gitcookies
 [core]
