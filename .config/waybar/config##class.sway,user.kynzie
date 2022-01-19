@@ -1,0 +1,165 @@
+{
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 10, // Waybar height (to be removed for auto height)
+    "spacing": 0, // Gaps between modules (4px)
+    "modules-left": [
+         "sway/workspaces",
+         "sway/mode",
+    ],
+    "modules-right": [
+         "pulseaudio",
+         "backlight",
+         "idle_inhibitor",
+         "cpu",
+         "temperature",
+         "memory",
+         "disk",
+         "battery",
+         "network#wired",
+         "network#wireless",
+         "network#vpn_home",
+         "network#vpn_work",
+         "clock#date",
+         "clock#hour",
+         "tray",
+    ],
+
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [""],
+        "on-scroll-up": "brightnessctl -e s 1%+",
+        "on-scroll-down": "brightnessctl -e s 1%-",
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "on-click-right": "swaylock -e -f -c 00ced1",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true
+    },
+
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""],
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {}%",
+        "tooltip": true
+    },
+
+    "disk": {
+        "format": " {percentage_used}%",
+        "interval": 60,
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "half": 50,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time} ",
+        "format-good": "{icon}",
+        "format-full": "{icon}",
+        "format-icons": ["", "", "", "", ""],
+        "tooltip": true
+    },
+
+    "network#wired": {
+        "interface": "enp0s31f6",
+        "interval": 10,
+        "format-ethernet": "  {bandwidthUpOctets}  {bandwidthDownOctets}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": " ",
+        "tooltip-format-disconnected": "{ifname}: disconnected",
+        "on-click": "net-toggle.sh toggle ethernet"
+    },
+
+    "network#wireless": {
+        "interface": "wlan0",
+        "interval": 10,
+        "format-wifi": " {essid} ({signalStrength}%)   {bandwidthUpOctets}  {bandwidthDownOctets}",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": " ",
+        "tooltip-format-disconnected": "{ifname}: disconnected",
+        "on-click": "net-toggle.sh toggle wifi"
+    },
+
+    "network#vpn_home": {
+        "interface": "wg-home",
+        "interval": 10,
+        "format-ethernet": " Home",
+        "tooltip-format": "{ifname}: {ipaddr}   {bandwidthUpOctets}  {bandwidthDownOctets}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": " Home ",
+        "tooltip-format-disconnected": "disconnected",
+        "on-click": "net-toggle.sh toggle vpn-home"
+    },
+
+    "network#vpn_work": {
+        "interface": "wg-lse",
+        "interval": 10,
+        "format-ethernet": " LSE",
+        "tooltip-format": "{ifname}: {ipaddr}   {bandwidthUpOctets}  {bandwidthDownOctets}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": " LSE ",
+        "tooltip-format-disconnected": "disconnected",
+        "on-click": "net-toggle.sh toggle vpn-lse"
+    },
+
+    "clock#date": {
+        "interval": 60,
+        "format": " {:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+
+    "clock#hour": {
+        "interval": 1,
+        "format": " {:%H:%M:%S}",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5,
+    },
+}

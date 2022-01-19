@@ -1,0 +1,150 @@
+/* font: pango:monospace 10 */
+
+* {
+    font-family: "pango:DejaVu Sans Mono";
+    font-size: 10px;
+}
+
+#window,
+#mode,
+#workspaces {
+    margin: 0 2px;
+}
+
+window#waybar {
+    background-color: #323232;
+    color: #ffffff;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces button {
+    background-color: #68bdda;
+    color: #323232;
+    padding: 0 2px;
+    border: none;
+    border-radius: 0;
+}
+
+#workspaces button:hover {
+    background: #ffffff;
+}
+
+#workspaces button.focused {
+    background-color: #285577;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #be0200;
+}
+
+#mode {
+    background-color: #be0200;
+}
+
+#pulseaudio,
+#backlight,
+#idle_inhibitor,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#network,
+#battery,
+#clock,
+#tray {
+    padding: 0 5px;
+}
+
+#idle_inhibitor,
+#battery,
+#network.vpn_work {
+    margin-right: 15;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#pulseaudio,
+#backlight {
+    background-color: #f8d04d;
+    color: #323232;
+}
+
+#cpu,
+#temperature,
+#memory,
+#disk,
+#battery,
+#battery.plugged,
+#battery.charging,
+#battery.good {
+    background-color: #69c068;
+    color: #323232;
+}
+
+#pulseaudio.muted,
+#idle_inhibitor,
+#network.disconnected {
+    background-color: transparent;
+    color: #848484;
+}
+
+#pulseaudio.bluetooth {
+    color: #4066ea;
+}
+
+#idle_inhibitor.activated,
+#temperature.critical,
+#battery.critical:not(.charging) {
+    background-color: #be0200;
+    color: #ffffff;
+}
+
+#battery.charging.critical,
+#battery.charging.warning,
+#battery.charging.half,
+#battery.discharging.half,
+#battery.discharging.warning {
+    background-color: #ff8b00;
+    color: #323232;
+}
+
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    background-color: #4eadea;
+    color: #323232;
+}
+
+#clock,
+#tray {
+    background-color: transparent;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
