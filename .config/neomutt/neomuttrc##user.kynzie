@@ -13,10 +13,10 @@ set postponed = +Drafts
 set sendmail="msmtp --read-envelope-from"
 set reverse_name
 set reverse_realname
-alternates ^alizee.penel@gmail.com$ ^alizou22@aol.com$ \
-	   ^perfect_pepita@hotmail.com$ ^alizee.penel@epita.fr$ \
-	   ^penel_b@epita.fr$ ^alizee.thalesgroup.com$ ^apenel@genymobile.com$ \
-	   ^alizee1.penel@epita.fr
+alternates ^alizou22@aol.com$ ^perfect_pepita@hotmail.com$ \
+	   ^alizee.thalesgroup.com$ ^apenel@genymobile.com$ \
+	   ^alizee.penel@epita.fr$ ^penel_b@epita.fr$ ^alizee1.penel@epita.fr$ \
+	   ^alizee@lse.epita.fr$ ^kynzie@lse.epita.fr$
 
 # HMTL handling
 auto_view text/html
