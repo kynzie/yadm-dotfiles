@@ -5,8 +5,10 @@ endif
 
 set nocompatible
 
-silent! if plug#begin()
-	Plug 'vim-scripts/cscope.vim'
+silent! if plug#begin('~/.vim/plugged')
+	if !has('nvim')
+		Plug 'vim-scripts/cscope.vim'
+	endif
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'flazz/vim-colorschemes'
@@ -16,7 +18,11 @@ silent! if plug#begin()
 	Plug 'Glench/Vim-Jinja2-Syntax'
 	Plug 'tpope/vim-surround'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
-	Plug 'Valloric/YouCompleteMe', {'do': './install.py --system-libclang --all'}
+	if !has('nvim')
+		Plug 'Valloric/YouCompleteMe', {'do': './install.py --system-libclang --all'}
+	else
+		Plug 'Valloric/YouCompleteMe', {'do': 'python -m pip install --user --upgrade pynvim && ./install.py --system-libclang --all'}
+	endif
 	call plug#end()
 endif
 

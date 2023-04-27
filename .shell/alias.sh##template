@@ -17,7 +17,7 @@ alias klog='dmesg --color=always | less -R'
 
 {% if yadm.user == "kynzie" %}
 alias gitk='gitk --all &'
-alias v='gvim'
+alias v='nvim'
 alias mutt='neomutt'
 alias gpg='gpg2'
 alias z='zathura'
