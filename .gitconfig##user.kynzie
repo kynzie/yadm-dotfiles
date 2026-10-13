@@ -16,6 +16,9 @@
 [format]
 	signOff = true
 
+[http]
+	cookiefile = /home/kynzie/.gitcookies
+
 [color]
 	ui = auto
 	branch = auto
@@ -100,8 +103,6 @@
 	rst = restore
 	rstS = restore -S
 
-[http]
-	cookiefile = /home/kynzie/.gitcookies
 [init]
 	defaultBranch = main
 [filter "lfs"]
