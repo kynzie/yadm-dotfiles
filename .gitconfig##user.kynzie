@@ -1,36 +1,53 @@
 [user]
 	name = Alizée Penel
 	email = alizee.penel@gmail.com
-	signingkey = D9D1EF112A725BA3908E3AF35B1F2940A6A760F6
+	signingKey = D9D1EF112A725BA3908E3AF35B1F2940A6A760F6
 
 [init]
 	defaultBranch = main
 
-[push]
-	default = simple
+[fetch]
+	prune = true
 
 [pull]
 	rebase = true
 
-[commit]
-	verbose = true
-	gpgsign = true
+[branch]
+	sort = -committerdate
+
+[diff]
+	algorithm = histogram
+	colorMoved = default
 
 [format]
 	signOff = true
 
-[http]
-	cookiefile = /home/kynzie/.gitcookies
+[commit]
+	verbose = true
+	gpgSign = true
 
-[color]
-	ui = auto
-	branch = auto
-	diff = auto
-	grep = auto
-	interactive = auto
-	pager = true
-	showBranch = auto
-	status = auto
+[tag]
+	gpgSign = true
+
+[rebase]
+	autoStash = true
+	updateRefs = true
+
+[push]
+	autoSetupRemote = true
+	followTags = true
+
+[merge]
+	conflictStyle = zdiff3
+
+[rerere]
+	enabled = true
+
+[help]
+	autocorrect = prompt
+
+[http]
+	cookiefile = ~/.gitcookies
 
 [color "branch"]
 	current = green bold
@@ -40,7 +57,7 @@
 	plain = yellow
 
 [color "diff"]
-	plain = dim
+	context = dim
 	meta = "#ff8000"
 	frag = "#3399ff"
 	func = "#00ffff"
@@ -73,12 +90,11 @@
 [color "status"]
 	header = dim
 	added = green bold
-	updated = green bold
 	changed = red bold
 	untracked = yellow bold
 	branch = "#ff8000" bold reverse
-	nobranch = red bold blink
-	unmerged = yellow bold blink
+	nobranch = red bold reverse
+	unmerged = yellow bold reverse
 
 [alias]
 	ck = checkout
