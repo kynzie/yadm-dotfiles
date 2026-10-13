@@ -102,8 +102,6 @@
 
 [http]
 	cookiefile = /home/kynzie/.gitcookies
-[core]
-	excludesfile = /home/kynzie/.gitignore
 [init]
 	defaultBranch = main
 [filter "lfs"]
