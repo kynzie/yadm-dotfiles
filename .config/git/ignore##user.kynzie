@@ -3,7 +3,6 @@ __pycache__/
 _minted-*/
 *.nav
 *.snm
-*.tex
 *.vrb
 *.xdv
 *.o
