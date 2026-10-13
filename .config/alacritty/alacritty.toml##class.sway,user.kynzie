@@ -1,0 +1,5 @@
+[general]
+import = ["~/.config/alacritty/new_moon.toml"]
+
+[font]
+size = 9
