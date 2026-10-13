@@ -3,6 +3,9 @@
 	email = alizee.penel@gmail.com
 	signingkey = D9D1EF112A725BA3908E3AF35B1F2940A6A760F6
 
+[init]
+	defaultBranch = main
+
 [push]
 	default = simple
 
@@ -103,8 +106,6 @@
 	rst = restore
 	rstS = restore -S
 
-[init]
-	defaultBranch = main
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
