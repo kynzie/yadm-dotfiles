@@ -92,12 +92,16 @@
 	rZt = reset --hard
 	a = add
 	ap = add -p
+	rap = restore --staged -p
 	l = log --decorate
 	g = grep
 	df = diff
+	dfc = diff --cached
 	visual = !gitk --all
 	last = log -1 HEAD
 	rbi = rebase --autosquash -i
+	rbc = rebase --continue
+	rba = rebase --abort
 	save = !git add -A && git commit -m 'SAVEPOINT'
 	wip = !git add -u && git commit -m "WIP"
 	test = !git push -n
