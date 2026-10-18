@@ -4,9 +4,6 @@ case $- in
 	*) return ;;
 esac
 
-# append to the history file, don't overwrite it
-shopt -s histappend
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -32,9 +29,15 @@ PMT_HOST="\h"
 PMT_JOBS="\j"
 PMT_SEP=$IFS
 
+# Start from the system's PROMPT_COMMAND (saved on first load) so that
+# reloading this file does not stack the same commands again.
+: "${__pc_system=$PROMPT_COMMAND}"
+PROMPT_COMMAND=$__pc_system
+
 . $HOME/.shellrc
 
-PROMPT_COMMAND=set_ps1
+# set_ps1 first: it reads the exit status of the last command
+PROMPT_COMMAND="set_ps1${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
 {% if yadm.user == "kynzie" %}
 # Add completion even with sudo
