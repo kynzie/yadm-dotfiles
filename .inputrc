@@ -4,6 +4,20 @@ $include /etc/inputrc
 
 set bell-style none
 
+# Completion behaving like ~/.zsh/completion.zsh: the first Tab completes
+# the common part and lists the candidates, the next ones cycle through
+# them (zsh: auto_menu, menu select).
+$if Bash
+    TAB: menu-complete
+    set menu-complete-display-prefix on
+    set show-all-if-ambiguous on
+$endif
+set colored-stats on                # colors from LS_COLORS (zsh: list-colors)
+set colored-completion-prefix on    # highlight the part already typed
+set visible-stats on                # type marker in lists: / @ * (zsh: list_types)
+set mark-symlinked-directories on   # trailing / on links to directories
+set skip-completed-text on          # completing mid-word (zsh: complete_in_word)
+
 # Key bindings matching ~/.zsh/key-bindings.zsh (emacs mode, the default).
 # Arrow, Home and End keys send different sequences depending on the
 # terminal mode: both forms are bound.
