@@ -31,3 +31,7 @@ setopt interactivecomments
 for conf in $HOME/.zsh/**.zsh; do
 	source $conf
 done
+
+if [ -r /usr/share/zsh/plugins/zsh-hist/zsh-hist.plugin.zsh ]; then
+	source /usr/share/zsh/plugins/zsh-hist/zsh-hist.plugin.zsh
+fi
