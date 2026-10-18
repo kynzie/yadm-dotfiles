@@ -21,6 +21,7 @@ PMT_SEP=$'\n'
 
 . $HOME/.shellrc
 
+unsetopt beep
 setopt prompt_subst
 autoload -Uz add-zsh-hook
 prompt_opts=(cr subst percent)
