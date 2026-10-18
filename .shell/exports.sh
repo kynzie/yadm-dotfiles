@@ -1,1 +1,0 @@
-export MAILCHECK=-1
