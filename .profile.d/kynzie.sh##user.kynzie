@@ -1,0 +1,3 @@
+# Session environment for kynzie only (sourced by ~/.profile).
+
+__path_append "$HOME/.bin"

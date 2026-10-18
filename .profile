@@ -16,6 +16,11 @@ __path_append() {
 	esac
 }
 
+for __f in "$HOME"/.profile.d/*.sh; do
+	[ -r "$__f" ] && . "$__f"
+done
+unset __f
+
 # User executables (XDG Base Directory, systemd file-hierarchy)
 __path_append "$HOME/.local/bin"
 
