@@ -3,3 +3,47 @@
 $include /etc/inputrc
 
 set bell-style none
+
+# Key bindings matching ~/.zsh/key-bindings.zsh (emacs mode, the default).
+# Arrow, Home and End keys send different sequences depending on the
+# terminal mode: both forms are bound.
+$if Bash
+    # Up/Down: search history for commands starting with what is typed
+    "\e[A": history-search-backward
+    "\e[B": history-search-forward
+    "\eOA": history-search-backward
+    "\eOB": history-search-forward
+
+    # PageUp/PageDown: previous/next history entry
+    "\e[5~": previous-history
+    "\e[6~": next-history
+
+    # Home/End, Delete
+    "\e[H": beginning-of-line
+    "\e[F": end-of-line
+    "\eOH": beginning-of-line
+    "\eOF": end-of-line
+    "\e[1~": beginning-of-line
+    "\e[4~": end-of-line
+    "\e[3~": delete-char
+
+    # Ctrl-Left/Ctrl-Right: move by word
+    "\e[1;5D": backward-word
+    "\e[1;5C": forward-word
+
+    # Shift-Tab: previous completion
+    "\e[Z": menu-complete-backward
+
+    # Space: expand history references (!!, !$...) as they are typed
+    Space: magic-space
+
+    # Esc-w: kill the region between the mark and the cursor
+    "\ew": kill-region
+
+    # Esc-l: run ls
+    "\el": "ls\n"
+
+    # Esc-m: duplicate the previous word (approximates zsh's
+    # copy-prev-shell-word; goes through the kill ring)
+    "\em": "\C-w\C-y\C-y"
+$endif
