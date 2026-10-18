@@ -27,3 +27,35 @@ __path_append "$HOME/.local/bin"
 export PATH
 
 unset -f __path_append
+
+######################################
+# Print the first of the given commands that is installed.
+# Arguments:
+#   $@  candidate commands, in order of preference
+# Outputs:
+#   The command name; nothing if none is installed.
+# Returns:
+#   0 if one was found, 1 otherwise.
+#######################################
+__first_available() {
+	for __cmd; do
+		if command -v "$__cmd" >/dev/null 2>&1; then
+			printf '%s\n' "$__cmd"
+			unset __cmd
+			return 0
+		fi
+	done
+	unset __cmd
+	return 1
+}
+
+# nvim if installed
+# otherwise the system's choice
+# otherwise the first available of vim, vi, nano
+# left unset if none is installed
+__editor=$(__first_available nvim) || __editor=${EDITOR:-$(__first_available vim vi nano)}
+if [ -n "$__editor" ]; then
+	export EDITOR="$__editor" VISUAL="$__editor"
+fi
+
+unset __editor
