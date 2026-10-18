@@ -1,13 +1,17 @@
 # Alacritty color scheme: new_moon
-# Personal theme
+# Comfort revision
+# Personal theme, not from the official alacritty/alacritty-theme repository.
 # Converted to TOML from the `schemes.new_moon` block of the old alacritty.yml
+# Every text color keeps a contrast ratio of at least 4.5:1 on the background.
 
 [colors.primary]
-background = "#2D2D2D"
-foreground = "#B3B9C5"
+background      = "#2D2D2D"
+foreground      = "#B3B9C5"
+dim_foreground  = "#92969F"
+bright_foreground = "#E6E9EF"
 
 [colors.normal]
-black   = "#2D2D2D"
+black   = "#3A3A3A"
 red     = "#F2777A"
 green   = "#92D192"
 yellow  = "#FFD479"
@@ -17,11 +21,21 @@ cyan    = "#76D4D6"
 white   = "#B3B9C5"
 
 [colors.bright]
-black   = "#777C85"
-red     = "#F2777A"
-green   = "#76D4D6"
+black   = "#92979F"
+red     = "#F79A9C"
+green   = "#A8E0A8"
 yellow  = "#FFEEA6"
-blue    = "#6AB0F3"
-magenta = "#E1A6F2"
-cyan    = "#76D4D6"
-white   = "#FFFFFF"
+blue    = "#8EC4F6"
+magenta = "#ECC3F6"
+cyan    = "#9FE3E5"
+white   = "#E6E9EF"
+
+[colors.dim]
+black   = "#3A3A3A"
+red     = "#E67375"
+green   = "#74A074"
+yellow  = "#AD935B"
+blue    = "#609AD1"
+magenta = "#B287BF"
+cyan    = "#5FA0A2"
+white   = "#92969F"

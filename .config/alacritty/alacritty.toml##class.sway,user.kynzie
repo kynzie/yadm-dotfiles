@@ -3,3 +3,7 @@ import = ["~/.config/alacritty/new_moon.toml"]
 
 [font]
 size = 9
+
+[window]
+padding = { x = 3 }
+dynamic_padding = true
