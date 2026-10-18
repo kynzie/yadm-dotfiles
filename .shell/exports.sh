@@ -11,5 +11,3 @@ else
         export HISTFILE=$HOME/.sh_history
         export HISTTIMEFORMAT="%d/%m/%y %T "
 fi
-
-export _JAVA_AWT_WM_NONREPARENTING=1
