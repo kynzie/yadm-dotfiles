@@ -1,3 +1,9 @@
 # Session environment for kynzie only (sourced by ~/.profile).
 
 __path_append "$HOME/.bin"
+
+# Go: "go install" binaries with the other user executables (already in
+# PATH), module cache with the other caches, the rest with user data
+export GOBIN="$HOME/.local/bin"
+export GOMODCACHE="${XDG_CACHE_HOME:-$HOME/.cache}/go/mod"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
