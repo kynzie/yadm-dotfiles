@@ -14,4 +14,4 @@ alias grep='grep --color'
 alias egrep='egrep --color'
 alias ssh='TERM=xterm-256color ssh'
 alias klog='dmesg --color=always | less -R'
-alias v="$EDITOR"
+alias v='$EDITOR'

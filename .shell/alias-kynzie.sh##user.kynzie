@@ -1,5 +1,4 @@
 alias gitk='gitk --all &'
-alias v='nvim'
 alias mutt='neomutt'
 alias gpg='gpg2'
 alias z='zathura'
