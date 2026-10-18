@@ -4,6 +4,9 @@ case $- in
 	*) return ;;
 esac
 
+# Ctrl-S searches history forward instead of freezing the terminal
+stty -ixon 2>/dev/null
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
