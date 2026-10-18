@@ -1,0 +1,5 @@
+# ~/.inputrc: readline configuration (bash and other readline programs).
+# Keep the system defaults, then override.
+$include /etc/inputrc
+
+set bell-style none
