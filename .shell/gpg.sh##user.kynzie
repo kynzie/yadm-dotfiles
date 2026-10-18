@@ -1,32 +1,23 @@
-function reshadow() {
-	local keydir="$(gpgconf --list-dirs homedir)/private-keys-v1.d"
-	if [ -d "${keydir}" ]; then
-		for key in $(find ${keydir} -name \*.key); do
-			if [ "$(head -c 24 $key | tail -c 20)" = "shadowed-private-key" ]; then
-				rm -f "$key"
-			fi
-		done
-		gpg --card-status &> /dev/null
-		echo "Done"
-	else
-		echo "GPG keydir not found" >&2
-		return 1
-	fi
+# Refresh the agent's stubs after switching to another smartcard holding the
+# same keys (otherwise gpg keeps asking for the previous card).
+reshadow() {
+	gpg-connect-agent "scd serialno" "learn --force" /bye
 }
 
-if [ !"$SSH_CONNECTION" ] && [ "$SSH_TTY" != "$(tty)" ]; then
-	# Set GPG TTY
-	export GPG_TTY=$(tty)
+# Terminal used by pinentry-curses/tty when gpg runs from this shell
+GPG_TTY=$(tty)
+export GPG_TTY
 
-	# Refresh gpg-agent tty in case user switches into an X session
-	gpg-connect-agent updatestartuptty /bye >/dev/null
+# Local session only: over SSH, keep the forwarded agent and the remote tty
+if [ -z "${SSH_CONNECTION:-}" ]; then
+	# SSH requests reach gpg-agent without a tty or display of their own:
+	# point the agent's pinentry at this session (tty, DISPLAY, WAYLAND...).
+	gpg-connect-agent updatestartuptty /bye >/dev/null 2>&1
 
-	# Set SSH to use gpg-agent
+	# Let ssh use gpg-agent (unless gpg-agent itself started this shell)
 	unset SSH_AGENT_PID
 	if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-		export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-		if [ ! -e "$SSH_AUTH_SOCK" ]; then
-			export SSH_AUTH_SOCK="$(gpgconf --list-dirs | grep homedir | cut -d: -f2)/S.gpg-agent.ssh"
-		fi
+		SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+		export SSH_AUTH_SOCK
 	fi
 fi
