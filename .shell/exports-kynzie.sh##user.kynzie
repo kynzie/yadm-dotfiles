@@ -1,7 +1,1 @@
-if [[ -d $HOME/.local/share/gem ]]; then
-	ruby_path=$HOME/.local/share/gem/ruby/
-	RUBY_PATH=:$ruby_path$(ls --color=never -1 $ruby_path | tail -n 1)bin
-fi
-
-export PATH=$PATH:$RUBY_PATH
 export NO_AT_BRIDGE=1
