@@ -13,16 +13,4 @@ else
         export HISTTIMEFORMAT="%d/%m/%y %T "
 fi
 
-{% if yadm.user == "kynzie" %}
-export NNTPSERVER=news.epita.fr
-export GOPATH=$HOME/.go
-
-if [[ -d $HOME/.local/share/gem ]]; then
-	ruby_path=$HOME/.local/share/gem/ruby/
-	RUBY_PATH=:$ruby_path$(ls --color=never -1 $ruby_path | tail -n 1)bin
-fi
-
-export PATH=$PATH:$HOME/.bin:$GOPATH/bin$RUBY_PATH
-export NO_AT_BRIDGE=1
-{% endif %}
 export _JAVA_AWT_WM_NONREPARENTING=1
