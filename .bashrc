@@ -39,24 +39,16 @@ PROMPT_COMMAND=$__pc_system
 # set_ps1 first: it reads the exit status of the last command
 PROMPT_COMMAND="set_ps1${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 
-{% if yadm.user == "kynzie" %}
-# Add completion even with sudo
-complete -cf sudo
-
-BASH_CMPL_DIR=/usr/share/bash-completion/completions
-BASH_CMD_CACH=$HOME/.cache/bash-cmd-completions
-
-if [ -d $BASH_CMPL_DIR ]; then
-        if [ ! -f $BASH_CMD_CACH ]; then
-                for cmd in $(ls $BASH_CMPL_DIR); do
-                        which $cmd &> /dev/null && echo $cmd >> $BASH_CMD_CACH
-                done
+# Bash completion: loads each command's completion on demand.
+# Skipped if the system already loaded it (Arch: /etc/bash.bashrc).
+if [ -z "${BASH_COMPLETION_VERSINFO:-}" ]; then
+    for f in /usr/share/bash-completion/bash_completion \
+             /usr/local/share/bash-completion/bash_completion \
+             /etc/bash_completion; do
+        if [ -r "$f" ]; then
+            . "$f"
+            break
         fi
-
-        for cmd in $(cat $BASH_CMD_CACH); do
-                . $BASH_CMPL_DIR/$cmd
-        done
+    done
+    unset f
 fi
-unset BASH_CMPL_DIR
-unset BASH_CMD_CACH
-{% endif %}
