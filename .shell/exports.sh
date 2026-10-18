@@ -2,7 +2,6 @@ export HISTFILE=$HOME/.history
 export HISTSIZE=$((2 ** 15 - 1))
 export HISTCONTROL=ignoredups,erasedups
 export MAILCHECK=-1
-export EDITOR="nvim"
 
 set bell-style none
 
